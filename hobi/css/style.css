@@ -1,0 +1,447 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #00CC99;
+}
+.bike {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  width: 590px;
+  height: 430px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.bike > .wheel {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  border: 10px solid #210B61;
+  list-style: none;
+  -webkit-animation: 2s wheelrotate linear infinite forwards;
+          animation: 2s wheelrotate linear infinite forwards;
+}
+
+@-webkit-keyframes wheelrotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes wheelrotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.bike > .wheel:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 10px solid #F8E0E6;
+}
+
+.bike > .wheel:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #222;
+}
+
+.bike > .r-wheel {
+  right: 0;
+}
+
+.bike > .wheel > li {
+  position: absolute;
+  width: 180px;
+  left: 8px;
+  height: 0;
+  border: 2px solid #585858;
+  top: 50%;
+}
+
+.bike > .wheel > .stick1 {
+  -webkit-transform: rotate(15deg);
+      -ms-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.bike > .wheel > .stick2 {
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.bike > .wheel > .stick3 {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.bike > .wheel > .stick4 {
+  -webkit-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.bike > .wheel > .stick5 {
+  -webkit-transform: rotate(75deg);
+      -ms-transform: rotate(75deg);
+          transform: rotate(75deg);
+}
+
+.bike > .wheel > .stick6 {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.bike > .wheel > .stick7 {
+  -webkit-transform: rotate(105deg);
+      -ms-transform: rotate(105deg);
+          transform: rotate(105deg);
+}
+
+.bike > .wheel > .stick8 {
+  -webkit-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+.bike > .wheel > .stick9 {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.bike > .wheel > .stick10 {
+  -webkit-transform: rotate(150deg);
+      -ms-transform: rotate(150deg);
+          transform: rotate(150deg);
+}
+
+.bike > .wheel > .stick11 {
+  -webkit-transform: rotate(165deg);
+      -ms-transform: rotate(165deg);
+          transform: rotate(165deg);
+}
+
+.bike > .wheel > .stick12 {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.bike > .frame {
+  position: absolute;
+  border-radius: 10px;
+  height: 0;
+  border: 5px solid #F6D8CE;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.bike > .frame1 {
+  width: 170px;
+  bottom: 105px;
+  left: 100px;
+}
+
+.bike > .frame2 {
+  width: 210px;
+  bottom: 100px;
+  left: 275px;
+  -webkit-transform: rotate(-110deg);
+      -ms-transform: rotate(-110deg);
+          transform: rotate(-110deg);
+}
+
+.bike > .frame3 {
+  width: 170px;
+  bottom: 100px;
+  left: 105px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.bike > .frame4 {
+  width: 240px;
+  bottom: 100px;
+  left: 270px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.bike > .frame5 {
+  width: 215px;
+  bottom: 222px;
+  left: 230px;
+  -webkit-transform: rotate(-13.5deg);
+      -ms-transform: rotate(-13.5deg);
+          transform: rotate(-13.5deg);
+}
+
+.bike > .frame6 {
+  width: 210px;
+  bottom: 100px;
+  left: 480px;
+  -webkit-transform: rotate(-102deg);
+      -ms-transform: rotate(-102deg);
+          transform: rotate(-102deg);
+}
+
+.bike > .cushion {
+  position: absolute;
+  bottom: 305px;
+  left: 170px;
+  width: 60px;
+  border-radius: 10px 50px;
+  height: 0;
+  border: 5px solid #DF013A;
+}
+
+.bike > .cushion:before{
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: -10px;
+  width: 30px;
+  height: 15px;
+  border-radius: 10px 15px;
+  background: #DF013A;
+}
+
+.bike > .head {
+  position: absolute;
+  bottom: 310px;
+  left: 430px;
+  width: 40px;
+  height: 0;
+  border: 5px solid #DF013A;
+  border-radius: 10px;
+}
+
+.bike > .head:after{
+  content: "";
+  position: absolute;
+  width: 5px;
+  top: 64px;
+  left: 26px;
+  height: 0;
+  border: 5px solid #DF013A;
+  border-radius: 10px;
+}
+
+.bike > .head > .handler {
+  position: absolute;
+  left: 33px;
+  top: -4px;
+  width: 50px;
+  height: 100px;
+  overflow: hidden;
+  -webkit-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.bike > .head > .handler:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -34px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 10px solid #DF013A;
+}
+
+.bike > .wheel-axle,
+.bike > .axle {
+  position: absolute;
+  bottom: 75px;
+  left: 240px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid #19070B;
+}
+
+.bike > .axle {
+  -webkit-animation: 3s axlerotate linear infinite forwards;
+          animation: 3s axlerotate linear infinite forwards;
+}
+
+@-webkit-keyframes axlerotate{
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes axlerotate{
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.bike > .wheel-axle:after,
+.bike > .axle:after{
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #19070B;
+}
+
+.bike > .axle > .stick {
+  position: absolute;
+  height: 0;
+  border-radius: 10px;
+  border: 3px solid #19070B;
+  -webkit-transform-origin: 0 50%;
+      -ms-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+
+.bike > .axle > .stick1 {
+  width: 100px;
+  top: 27px;
+  left: -23px;
+}
+
+.bike > .axle > .stick2 {
+  width: 60px;
+  bottom: -7px;
+  left: 30px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.bike > .axle > .pedal {
+  position: absolute;
+  height: 0;
+  border-radius: 10px;
+  border: 3px solid #19070B;
+  -webkit-transform-origin: 0 50%;
+      -ms-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-animation: 3s pedalrotate linear infinite forwards;
+          animation: 3s pedalrotate linear infinite forwards;
+}
+
+.bike > .axle > .pedal {
+  position: absolute;
+  height: 0;
+  border-radius: 10px;
+  border: 3px solid #210B61;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  width: 30px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@-webkit-keyframes pedalrotate{
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes pedalrotate{
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.bike > .axle > .pedal1 {
+  left: -39px;
+  top: 26px;
+}
+
+.bike > .axle > .pedal2 {
+  right: -39px;
+  top: 27px;
+}
+
+.bike > .wheel-axle {
+  left: 75px;
+}
+
+.bike > .wheel-axle > .chain {
+  position: absolute;
+  width: 160px;
+  height: 0;
+  border-radius: 10px;
+  border: 3px solid #19070B;
+  left: 30px;
+}
+
+.bike > .wheel-axle > .chain1 {
+  top: -5px;
+}
+
+.bike > .wheel-axle > .chain2 {
+  top: 60px;
+}

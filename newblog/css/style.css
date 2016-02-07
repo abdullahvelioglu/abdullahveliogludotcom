@@ -242,12 +242,14 @@ html.overflow,body.overflow{
 }
 /* Demo.css  */
 h1,h2,h3,h4,h5,h6{
-  color: #2f2f2f;
+  color: #ffffff;
   margin:10px 0;
   font-weight: 700;
+  background-image: url("image/background2.jpg");
+    text-shadow: 1px 1px 6px #fff;
 }
 p{
-  color: #2f2f2f;
+  color: #535353;
   font-size: 17px;
   line-height: 26px;
   margin:10px 0;
@@ -265,6 +267,10 @@ p{
 }
 body{
   background:#2c3e50;
+  background-image: url("image/background.jpg");
+  background-repeat:no-repeat;
+      background-size: cover;
+
   font-family: 'Roboto', sans-serif;
   margin-top:50px;
 }
@@ -288,6 +294,3 @@ body{
   background: rgba(255,255,255,1);
   height: 6px;
 }
-
-
-

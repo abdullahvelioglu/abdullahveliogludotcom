@@ -2,737 +2,119 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>BLOG</title>
-    
-    
-    
-    
-        <link rel="stylesheet" href="css/style.css">
+    <title>BLOG-Abdullah Velioglu</title>
+    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
 
-    
-    
-    
+
+
+    <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
+
+
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      #products {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+.category {
+  background: no-repeat center center scroll;
+  background-size: cover;
+	width: 16.66666%;
+	text-align: center;
+	flex: 0 1 auto;
+	position: relative;
+}
+  .category.one {background-image: url("http://www.abdullahvelioglu.com/icon/rails.png");}
+  .category.two {background-image: url("http://www.abdullahvelioglu.com/icon/database.jpg");}
+  .category.three {background-image: url("http://abdullahvelioglu.com/icon/htmlcss.jpeg");}
+	.category.four {background-image: url("http://www.abdullahvelioglu.com/icon/algorithm.jpg");}
+	.category.five {background-image: url("http://www.abdullahvelioglu.com/icon/sport.jpg");}
+	.category.six {background-image: url("http://www.abdullahvelioglu.com/icon/comingsoon.jpg");}
+
+.category a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.caption {
+  position: absolute;
+	top: 0;
+	left: 0;
+  height: 575px;
+  width: 100%;
+  line-height: 575px;
+  color: #fff;
+  font-family: "Avenir";
+	font-size: 22px;
+	font-size 1.409rem;
+  text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 0 1px 1px #000;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.6);
+	transition: all 400ms ease;
+	z-index: 1;
+}
+.caption:hover {background: transparent; opacity: 0;}
+
+@media (max-width: 4000px) {
+  #products {height: 100vh;}
+	.category {width: 33.33333%;}
+}
+
+@media (max-width: 540px) {
+	.category {width: 50%;}
+}
+    </style>
+
+
+        <script src="js/prefixfree.min.js"></script>
+
+
   </head>
 
   <body>
-
     <!--CONTAINER-->
 <div class="container">
    <!--ROW-->
    <div class="row">
       <div class="title">
-         <p align="left"><a href='http://www.abdullahvelioglu.com' style='text-decoration:none;'><font color="white">&nbsp; &nbsp; Anasayfa</font></a> </p><a>Ben<br>ve<br>Yazılarım</a>   </div>
-      
-
-
-
-
-
-
-
-
-
-
-
-<!--İTEM-->
-      <div class="col-4-grid">
-         <div class="item">
-            <div class="front-end">
-              <div class="item-title">Ruby on Rails Öğreniyorum - Rails nedir?</div>
-              <img src="http://www.abdullahvelioglu.com/icon/blog-1-1.jpg" alt="" />
-            </div>
-            <div class="back-end">
-              <div class="item-image">
-                <img src="http://www.abdullahvelioglu.com/icon/blog-1-2.png" alt="" />
-              </div>
-              <div class="item-title">Ruby on Rails Başlangıç - Rails nedir?</div>
-              <p>Rails, Ruby dili ile yazılmış bir web uygulamaları geliştirme çatısıdır. Her yazılımcının bir web uyguluması geliştirmeye başlarken yapması gereken temel işleri Rails sizin için yapıyor ve böylelikle sizin zamanınızı daha değerli işleriniz için ayırmanızı sağlıyor. Diğer dillere göre çok daha az kod yazarak daha çok iş yapmanıza olanak tanıyor. Ayrıca biz Railscilere göre, Rails ile uygulama geliştirmek çok eğlenceli.<br><br></p>
-
-              <p>Rails bazı konulurda dik kafalı bir dildir. Birşeyleri yapmanın herzaman 'en iyi' yolu olduğunu varsayar ve bu yolda sizi cesaretlendirir ve alternatiflerinin cesaretini kırar. Eğer 'The Rails Way (Rails Yolu)' diye birşey duyduysanız, muhtemelen iş veriminde harika bir artışı keşfetmişsinizdir. Eğer diğer dillerde öğrendiğiniz eski alışkınlıklarınızı Rails geliştirirken de kullanmak isterseniz biraz daha mutsuz tecrübe yaşayabilirsiniz.<br><br> </p>
-
-              <p> Rails felsefesi 2 ana rehber prensipten oluşur:
-
-    DRY - "Don't Repeat Yourself (Kendini Tekrarlama) " - tekrar tekrar aynı kodları farklı yerlerde yazmanın ne kadar kötü olduğunu söyler.
-    Convention Over Configuration (Genel Proje Konfigürasyon Gelenkleri) - Rails, sizin bir web uyguluması geliştirirken nelere ihtiyacınız olduğuyla ilgili varsayımda bulunur ve projeyi ayağa kaldırmak için onlarca kütüphaneyi tek tek bulup manuel olarak 'require' etmeniz yerine onları otomatik olarak konfigüre eder.
-</p>
-
-              
-            </div>
-         </div>
-      </div>
-      <!--#İTEM-->
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--İTEM-->
-      <div class="col-4-grid">
-         <div class="item">
-            <div class="front-end">
-              <div class="item-title">
-Ruby on Rails Öğreniyorum - Rails ile rastgele web sayfaları uygulaması</div>
-              <img src="http://www.abdullahvelioglu.com/icon/blog-2-1.png" alt="" />
-            </div>
-            <div class="back-end">
-              <div class="item-image">
-                <img src="http://www.abdullahvelioglu.com/icon/blog-2-2.jpg" alt="" />
-              </div>
-              <div class="item-title">Ruby on Rails Öğreniyorum - Rails ile rastgele web sayfaları uygulaması</div>
-                <p>Rails'i öğreniyorum yazılarımda bugün sizinle birlikte basit bir Rails uygulaması yapacağım. Uygulamanın amacı ekledigimiz web sitelerini rastgele olarak ekrana yazdırmak.Bazen canım sıkılıyor ve bilgisayarda yapacak hiçbir şey bulamiyorum. Bu uygulamayı açarak karşıma çıkan web sitesine girip zaman geçiriyorum. Artık hangi web sitelerini koyacağınız tamamen size kalmış. Ben genelde teknik makalalelerin olduğu siteleri koyduğum için boş vakitlerimde bilgisayarda takılarak hem öğrenip hem de zaman geçirmiş oluyorum. </p>
-
-<br>
-<p> Bu uygulumayı Rails 4.2.4 versiyonu ile yapacağız. </p>
-<br>
-<p> Konsoldan yeni projemizi oluşturalım. </p>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">rails new websiteleri
-cd websiteleri</span></notextile></pre></div>
-<p>  projemizi oluşturduk, şimdi gidilebilecek yerleri kaydetmek için bir model yapısı kuralım. Basit bir tabloda sadece websayfalarının isimlerini yazmamız yeterli. Bunun için <code>websiteleri</code> modeli oluşturalım ve tabloda <code>string</code> türünden <code>linkler</code> kolonu olsun. Daha sonra yeni mekanlar kaydetmek, editlemek için <code>controller</code> yazalım ve gerekli <code>route ve html</code> dosyalarını ayarlayalım.</p>
-
-<p>Korkutucu geldiyse iyi haberim var:) Rails ile tek satır konsol komutuyla bunların hepsini yapabiliyormuşuz. İşte sihirli sözcük: <code>scaffolding</code></p>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">rails g scaffold websiteleri <span class="key">linkler</span>:string
-<span class="comment">#Bu yazdığımız kod aşağıdakileri otomatik olarak oluşturacak</span>
-      invoke  active_record
-      create    db/migrate/<span class="integer">20131216200257</span>_create_websiteleris.rb
-      create    app/models/websiteleri.rb
-      invoke    test_unit
-      create      test/unit/websiteleri_test.rb
-      create      test/fixtures/websiteleris.yml
-      invoke  resource_route
-       route    resources <span class="symbol">:websiteleris</span>
-      invoke  scaffold_controller
-      create    app/controllers/websiteleris_controller.rb
-      invoke    erb
-      create      app/views/websiteleris
-      create      app/views/websiteleris/index.html.erb
-      create      app/views/websiteleris/edit.html.erb
-      create      app/views/websiteleris/show.html.erb
-      create      app/views/websiteleris/new.html.erb
-      create      app/views/websiteleris/_form.html.erb
-      invoke    test_unit
-      create      test/functional/websiteleris_controller_test.rb
-      invoke    helper
-      create      app/helpers/websiteleris_helper.rb
-      invoke      test_unit
-      create        test/unit/helpers/websiteleris_helper_test.rb
-      invoke  assets
-      invoke    coffee
-      create      app/assets/javascripts/websiteleris.js.coffee
-      invoke    scss
-      create      app/assets/stylesheets/websiteleris.css.scss
-      invoke  scss
-      create    app/assets/stylesheets/scaffolds.css.scss</span></notextile></pre></div>
-<br>
-<p>Gördüğümüz gibi <code>database migration</code> dosyamızda oluştu. Şimdi o dosyanın çalışması için bir komut daha yazalım. </p>
-<br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">rake <span class="key">db</span>:migrate</span></notextile></pre></div>
-<br>
-<p>Database oluştu. Teste hazırız...Serverımızı başlatalım:</p>
-<br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">rails s</span></notextile></pre></div>
-<br>
-<p>Web tarayıcınızı açın ve <code>localhost:3000/websiteleris</code> adresine gidin. Bu adresi nerden mi biliyorum? </p>
-
-<br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">abdullahs-<span class="key">ceng</span>:websiteleri abdullahvelioglu<span class="error">$</span> rake routes
-    websiteleris <span class="constant">GET</span>    <span class="regexp"><span class="delimiter">/</span><span class="content">websiteleris(.:format)          websiteleris#index
-           POST   </span><span class="delimiter">/</span><span class="modifier">me</span></span>kans(.<span class="symbol">:format</span>)          websiteleris<span class="comment">#create</span>
- new_websiteleri <span class="constant">GET</span>    <span class="regexp"><span class="delimiter">/</span><span class="content">websiteleris</span><span class="delimiter">/</span><span class="modifier">ne</span></span>w(.<span class="symbol">:format</span>)      websiteleris<span class="comment">#new</span>
-edit_websiteleri <span class="constant">GET</span>    <span class="regexp"><span class="delimiter">/</span><span class="content">websiteleris</span><span class="delimiter">/</span></span><span class="symbol">:id</span>/edit(.<span class="symbol">:format</span>) websiteleris<span class="comment">#edit</span>
-     websiteleri <span class="constant">GET</span>    <span class="regexp"><span class="delimiter">/</span><span class="content">websiteleris</span><span class="delimiter">/</span></span><span class="symbol">:id</span>(.<span class="symbol">:format</span>)      websiteleris<span class="comment">#show</span>
-           <span class="constant">PUT</span>    <span class="regexp"><span class="delimiter">/</span><span class="content">websiteleris</span><span class="delimiter">/</span></span><span class="symbol">:id</span>(.<span class="symbol">:format</span>)      websiteleris<span class="comment">#update</span>
-           <span class="constant">DELETE</span> <span class="regexp"><span class="delimiter">/</span><span class="content">websiteleris</span><span class="delimiter">/</span></span><span class="symbol">:id</span>(.<span class="symbol">:format</span>)      websiteleris<span class="comment">#destroy</span></span></notextile></pre></div>
-<br>
-<p>Gördüğünüz gibi <code>rake routes</code> komutu projemizdeki tüm pathleri gösteriyor.</p>
-
-<p>Evet, <code>http://localhost:3000/websiteleris</code> adresine gittiğinizde mekanlarımızın index sayfasını görüyorsunuz ve 'New Websiteleri' ile yeni mekan oluşturup onu düzenleyip silebiliyorsunuz.. Sizce de bu çok hızlı olmadı mı? :) </p>
-<br>
-<p> Sanki bir şey eksik... <code> localhost:3000 </code> adresine gittiğinizde varsayılan rails ekranı geliyor. Onun yerine rastgele web siteleri isimleri gelse nasıl olur?  Bunun için ana sayfamızı yayınlayan bir controller oluşturalım. Adını da <code>HomeController</code> koyalım.</p>
-<p> Bu controllerı sadece index sayfası için kullanacığımız için sadece index fonksiyonu, pathi, html dosyası yeterli olacak: </p>
-<br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">rails g controller <span class="constant">Home</span> index
-<span class="comment">#Otomatik oluşturulan dosyalar:</span>
-      create  app/controllers/home_controller.rb
-       route  get <span class="string"><span class="delimiter">&quot;</span><span class="content">home/index</span><span class="delimiter">&quot;</span></span>
-      invoke  erb
-      create    app/views/home
-      create    app/views/home/index.html.erb
-      invoke  test_unit
-      create    test/functional/home_controller_test.rb
-      invoke  helper
-      create    app/helpers/home_helper.rb
-      invoke    test_unit
-      create      test/unit/helpers/home_helper_test.rb
-      invoke  assets
-      invoke    coffee
-      create      app/assets/javascripts/home.js.coffee
-      invoke    scss
-      create      app/assets/stylesheets/home.css.scss
-</span></notextile></pre></div>
-<br>
-<p> Daha sonra varsayılan rails sayfasını kaldıralım. Bazen varsayılan raıls sayfası zaten kaldırılmış olabiliyor.
- </p><br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">rm public/index.html</span></notextile></pre></div>
-<br>
-<p> ve anasayfamızı home_controller.rb'nin index action'u olarak ayarlayalım. <code>config/routes.rb</code> dosyanzı açın ve aşağıda ki satırı ekleyin:</p>
-<br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">root <span class="symbol">:to</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">home#index</span><span class="delimiter">'</span></span></span></notextile></pre></div>
-<br>
-
-<p><code>localhost:3000</code> adresine tekrar gidin ve herşeyin doğru yaptığınızı göreceksiniz. Serverı kapattıysanız <code>rails s</code> ile açmayı unutmayın:)</p>
-<br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay"><span class="constant">Home</span><span class="comment">#index</span>
-<span class="constant">Find</span> me <span class="keyword">in</span> app/views/home/index.html.erb</span></notextile></pre></div>
-<br>
-<p> Şimdi <code>app/controllers/home_controller.rb</code> dosyamızın index actionunda rastgele web sitesi ismi seçelim ve onu ekranda gösterelim.. </p>
-<br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">  <span class="keyword">def</span> <span class="function">index</span>
-   <span class="instance-variable">@websiteleri</span> = <span class="constant">Websiteleri</span>.all.map(&amp;<span class="symbol">linkler</span>).sample
-  <span class="keyword">end</span></span></notextile></pre></div>
-<p> Bu kod tüm kayıtlı websiteleri isimlerini bir Array'e koyuyor ve 'sample' bir tanesini seçiyor ve bunu @websiteleri değişkenine atıyor. </p>
-<br>
-<p> <code>app/views/home/index.html.erb</code> dosyasını açın içeriği silin ve aşağıdaki kodu yazın: </p>
-<br>
-<div class="CodeRay"><pre><notextile><span class="CodeRay">&lt;<span class="string"><span class="delimiter">%=</span><span class="content"> @websiteleri %&gt;</span></span></span></notextile></pre></div>
-<br>
-<p> Tekrar ana sayfaya gittiğinizde, kayıtlı web siteleri içinden rastgele isimler geldiğini göreceksiniz. </p>
-<br>
-<p> Bugünlük bu kadar, siz projeyle biraz daha oynamaya devam edebilirsiniz, mesela ana sayfadan 'Yeni Website' için link koyabilirsiniz. </p>
-
-<p> Görüşmek üzere.. </p>
-
-
-
-
-              
-            </div>
-         </div>
-      </div>
-      <!--#İTEM-->
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--İTEM-->
-      <div class="col-4-grid">
-         <div class="item">
-            <div class="front-end">
-              <div class="item-title">Ruby on Rails Öğreniyorum - Rails Mimarisi ve Rails Bileşenleri</div>
-              <img src="http://www.abdullahvelioglu.com/icon/blog-3-1.jpg" alt="" />
-            </div>
-            <div class="back-end">
-              <div class="item-image">
-                <img src="http://www.abdullahvelioglu.com/icon/blog-3-2.png" alt="" />
-              </div>
-              <div class="item-title">Ruby on Rails Öğreniyorum - Rails Mimarisi ve Rails Bileşenleri</div>
-              <h1>Ruby on Rails Geçmiş Ders Hatırlatıcı</h1>
-
-<p>Rails de bir web projesi oluşturmaya başlamadan önce Rails , Rails de kullanılan
-MVC mimarisi ve Rails bileşenlerini inceleyelim. Daha sonra;</p>
-
-<ul>
-<li>Rails kurulumu,</li>
-<li>Yeni bir Rails projesi oluşturma,</li>
-<li>Veritabanımızı uygulamamıza bağlama,</li>
-<li>Rails uygulamasının tasarımı,</li>
-<li>MVC (Model View Controller) ve RESTful tasarımının temel ilkeleri,</li>
-<li>Hızlı bir şekilde Rails uygulamasının başlangıç ilkelerini oluşturma hakkında
-bilgi sahibi olacağız.</li>
-</ul>
-
-
-<p><strong>UYARI :</strong> Çalışmalar Rails 4.2.2 nin versiyonları ile olacaktır. 4.2.2 altındaki
-versiyonlarda bu kodlar ile çalışmak isterseniz hatalar ile karşılaşabilirsiniz.</p>
-
-<p>Versiyonlarınızı öğrenmek için terminalde;</p>
-
-<pre><code>$ rails -v   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Rails 4.2.2 
-
-
-$ ruby -v
-ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
-</code></pre>
-
-<p>komutlarından yararlanabilirsiniz.</p>
-
-<h1>Rails Nedir ?</h1>
-
-<p>Rails Ruby dili ile yazılmış, daha az kodla ve daha fazla zevkle yazmamızı
-sağlayan,açık kaynak bir web uygulaması frameworktür.</p>
-
-<p>Rails felsefesi birkaç temel üzerine oturmuştur:</p>
-
-<ul>
-<li>DRY(Don’t Repeat Yourself) – “Kendinizi tekrar etmeyin” – Tekrar tekrar
-aynı kodu yazmanın uygulamamız açısından kötü bir şey olduğunu savunmaktadır.</li>
-<li>Convention Over Configuration, yapılandırma kurallarını koyar. Ne yapmak
-istediğimiz ve nasıl bir yol izleyeceğimize dair varsayımlarda bulunarak
-küçük ayrıntıları sayısız defa ayarlamamızı engeller.</li>
-<li>REST(REpresentational State Transfer), web uygulamaları için en iyi
-modeldir. Uygulamamızın kaynak ve standart HTTP işlerini organize etmek
-için kullanılabilecek en hızlı yoldur.</li>
-</ul>
-
-
-<h1>MVC Mimarisi Nedir?</h1>
-
-<p>Rails Models, Views ve Controllers mimarisinden oluşmaktadır. &nbsp;</p>
-
-<p>MVC mimarisi bize;</p>
-
-<ul>
-<li>Kullanıcı arabirimi ile iş yapan lojiği birbirinden ayırma.</li>
-<li>DRY prensiplerine bağlı kalmayı kolaylaştırma.</li>
-<li>Kodlamaların berraklığı sayesinde bakım ve modifikasyon kolaylaştırma
-gibi imkanlar sağlamaktadır.</li>
-</ul>
-
-
-<p><strong>1.Models</strong></p>
-
-<ul>
-<li>Bir model, kurallara uygun olarak uygulama ve verileri arasındaki
-işlemleri sağlar.</li>
-<li>Uygulamanıza bağlı veritabanı ile iletişimin kurallarını yönetir.</li>
-<li>Veri tabanınızdaki her tabloya karşı uygulamanızda bir model oluşturur.</li>
-</ul>
-
-
-<p><strong>2.Views</strong></p>
-
-<ul>
-<li>Views uygulamanızdaki kullanıcı arayüzünü temsil etmektedir.</li>
-<li>Görevleri veriyi sunmak olan gömülü ruby kodlarıyla birleştirilmiş HTML dosyalarıdır.</li>
-<li>Web tarayıcısında verileri kullanıcıya iletmeye veya uygulamadaki isteklerin iletilmesini
-sağlamakla görevlidir.</li>
-</ul>
-
-
-<p><strong>3.Controllers</strong></p>
-
-<ul>
-<li>Controllers, web tarayıcısından gelen istekleri işleme, veri modellerini sorgulama ve sunum
-için verileri görsellere aktarmakla sorumludur.</li>
-</ul>
-
-
-<h1>Rails Bileşenleri Nelerdir?</h1>
-
-<p>Rails kurulduğunda kendine özgü birçok gem ile birlikte gelmektedir.</p>
-
-<p><strong>1.Action Pack</strong></p>
-
-<p>Action Pack Action Controller, Action View ve Action Dispatch içeren tek bir
-gemdir. “MVC” nin “VC” bölümü oluşturmaktadır.</p>
-
-<p>1.1.Action Controller</p>
-
-<p>Action Controller Rails uygulamasından gelen istekleri amaçlarına göre seçip
-çıkartarak uygun yerlere dağıtarak işler. Oturum yönetimi, şablon oluşturma  ve
-yönlendirmeler Action Controller tarafından sağlanmaktadır.</p>
-
-<p>1.2.Action Dispatch</p>
-
-<p>Action Dispatch, gelen web isteklerinin ,sizin uygulamanıza veya diğer bir Rack
-uygulamasına dağıtımını sağlar.</p>
-
-<p>1.3.Action View</p>
-
-<p>Action View, Rails uygulamasında görselliği yönetmektedir. Standart olarak HTML
-ve XML olarak çıktı üretilmesine olanak sağlar.</p>
-
-<p><strong>2.Action Mailer</strong></p>
-
-<p>Action Mailer, E-posta sevislerini ayarlamak için kullanılan bir frameworktür.</p>
-
-<p><strong>3.Active Model</strong></p>
-
-<p>Active Model, Action Pack gem servisleri ve Active Record gibi Nesne İlişkili
-Haritalama gemleri arasında tanımlanan bir arayüz sağlar.</p>
-
-<p><strong>4.Active Record</strong></p>
-
-<p>Active Record veritabanı bağımsızlığı, temel CRUD işlevlerini ve bir başka
-modelle ilişki kurma yeteneğini sağlar.</p>
-
-<p><strong>5.Active Resource</strong></p>
-
-<p>Active Reource, iş nesneleri ve RESTful web servisleri arasındaki bağlantıyı
-yönetmek için sunulan bir frameworktür.</p>
-
-<p><strong>6.Active Support</strong></p>
-
-<p>Active Support, Rails uygulamaları için yazılmış, birçok Ruby kütüphanesine
-sahip geniş bir kolleksiyondur.</p>
-
-<p><strong>7.Railties</strong></p>
-
-<p>Railties yeni bir web uygulaması için Rails kodlarını inşa etmektedir.</p>
-
-<h1>REST ( Representational State Transfer)</h1>
-
-<p>Rest, RESTfull mimarisinin temelidir. Roy Fielding’in ağ temelli yazılım mimarileri ve
-stillerini belirten doktora tezinden esinlenmiştir. Bu tezle Rails
-uygulamasına şu ana özellikler kazandırılmıştır :</p>
-
-<ul>
-<li>Kaynakları gösteren URL ler benzeri kaynak imleri kullanmak.</li>
-<li>Sistem bileşenleri arasında kaynakların durumunu taşımak.</li>
-</ul>
-
-
-<p>Örneğin;</p>
-
-<p><code>  DELETE /photos/17</code></p>
-
-<p>gibi 17 id sine sahip bir dosyanın silinmesi istenirse Rails bunu yöneterek sizi
-karmaşık işlerden ve web tarayıcısında karşılacağınız süprizlerden kurtarır.</p>
-              
-            </div>
-         </div>
-      </div>
-      <!--#İTEM-->
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--İTEM-->
-      <div class="col-4-grid">
-         <div class="item">
-            <div class="front-end">
-              <div class="item-title">Ruby on Rails Öğreniyorum - Yeni Bir Rails Projesi Oluşturma</div>
-              <img src="http://www.abdullahvelioglu.com/icon/blog-4-1.png" alt="" />
-            </div>
-            <div class="back-end">
-              <div class="item-image">
-                <img src="http://www.abdullahvelioglu.com/icon/blog-4-2.png" alt="" />
-              </div>
-              <div class="item-title">Ruby on Rails Başlangıç - Yeni Bir Rails Projesi Oluşturma</div>
-             
-
-<h1>Rails Kurulumu</h1>
-
-<p>Rails kurmanın en kolay yolu RubyGems avantajını kullanmaktır. Genellikle bu komutu root
-kullanıcı olarak çalıştırmanız gerekir.</p>
-
-<pre><code># gem install rails
-</code></pre>
-
-<p>veya</p>
-
-<pre><code>$ sudo gem install rails
-</code></pre>
-
-<p>komutları ile sisteminize rails' i yükleyebilirsiniz.</p>
-
-<p>Eğerki sisteminizde rails varsa,</p>
-
-<pre><code>$ rails -v 
-Rails 4.2.4
-</code></pre>
-
-<p>veya</p>
-
-<pre><code>$ rails --version
-Rails 4.2.4
-</code></pre>
-
-<p>komutları ile sürümünüzü öğrenebilirsiniz.</p>
-
-<p>Eğerki Windows işletim sistemi kullanıyorsanız <a href="http://railsinstaller.org/">Ruby On Rails</a>
-adresinden yardım alarak yapabilirsiniz.</p>
-
-<h1>Blog Uygulaması Üretmek</h1>
-
-<p>Konsoldan üzerinde çalışmak istediğimiz bir klasör veya ev dizinimizde</p>
-
-<pre><code>$ rails new blog
-</code></pre>
-
-<p>komutunu veriyoruz.Bu komuttan sonra rails gerekli klasör ve dosyaların
-bulunduğu bir blog klasörü oluşturuyor.</p>
-
-<p>Daha sonra;</p>
-
-<pre><code>$ cd blog
-</code></pre>
-
-<p>komutu ile blog uygulamamızın içerisine giriyoruz.</p>
-
-<p><strong>Not:</strong> Aksi söylenmedikçe yapılan işlemler blog uygulamasının içindeyken yapılacaktır.</p>
-
-<p>Oluşturulan blog uygulamsında bulunan dosya/klasör ve amaçlarından kısaca
-bahsedelim:</p>
-
-<p><strong>app/</strong>        &mdash;> models, views, controllers, assets ve helpers gibi klasörleri
-içerir.</p>
-
-<p><strong>config/</strong>     &mdash;> Uygulamanızın çalışma kuralları, yönlendirmeler ve veritabanı
-ayarlamaları bu klasörde bulunur.</p>
-
-<p><strong>config.ru</strong>   &mdash;> Rack temelli uygulamalarda, uygulamayı başlatma yarayan konfigürasyonlardır.</p>
-
-<p><strong>db/</strong>         &mdash;> Veritabanı şemalarını ve migrasyonları içermektedir.</p>
-
-<p><strong>doc/</strong>        &mdash;> Uygulamanızın dökümanlarını bu klasörün içindedir.</p>
-
-<p><strong>Gemfile</strong>     &mdash;> Rails uygulamanızın hangi Gemlere bağlı olduğunu göstermektedir</p>
-
-<p><strong>lib/</strong>        &mdash;> Uygulamanız için gemişletilmiş modüller burada bulunmaktadır.</p>
-
-<p><strong>log/</strong>        &mdash;> Uygulamanızın log dosyaları burada tutulur.</p>
-
-<p><strong>public/</strong>     &mdash;> Statik dosyaları ve derlenmiş assets dosyalarını barındırır.</p>
-
-<p><strong>Rakefile</strong>    &mdash;> Bu dosyada terminalden çalıştırılabilen batch işleri bulunmaktadır.</p>
-
-<p><strong>README.rdoc</strong> &mdash;> README dosyası uygulamanız hakkında kısa bilgiler bulundurmaya
-yarar.</p>
-
-<p><strong>script/</strong>     &mdash;> Başlangıç uygulamanızın rails script dosyalarını içermektedir.</p>
-
-<p><strong>test/</strong>       &mdash;> Rails uygulamasının test konuları bu kısımda bulunmaktadır.</p>
-
-<p><strong>tmp/</strong>        &mdash;> Geçici dosyaların bulunduğu kısımdır.</p>
-
-<p><strong>vendor/</strong>     &mdash;> 3. parti kodlar burada bulunmaktadır. Tipik bir rails
-uygulaması, Ruby Gemleri, Rails kodlarını içermektedir.</p>
-
-<h1>Veritabanı Konfigürasyonu</h1>
-
-<p>Tüm Rails uygulamaları bir veritabanı kullanmaktadır. Kullanılacak bu veritabanı
-config/database.yml dosyasında tarif edilmektedir.</p>
-
-<p><strong>1. SQLite3 Veritabanı Konfigürasyonu</strong></p>
-
-<p>Yeni bir Rails uygulaması oluşturduğunuzda default olarak SQLite3 veritabanı ile karşılaşırsınız.</p>
-
-<p>SQLite3 ile çalışacaksak config/database.yml içine;</p>
-
-<pre><code>development:
- adapter: sqlite3
- database: db/development.sqlite3
- pool: 5
- timeout: 5000
-</code></pre>
-
-<p>bilgilerini ekleriz.</p>
-
-<p><strong>2. MySQL Veritabanı Konfigürasyonu</strong></p>
-
-<p>MySQL veritabanı kullanmak isterseniz config/database.yml içine;</p>
-
-<pre><code>development:
- adapter: mysql2
- encoding: utf8
- database: blog_development
- pool: 5
- username: root
- password:
- socket: /tmp/mysql.sock
-</code></pre>
-
-<p>bilgilerini eklemeniz gereklidir.</p>
-
-<p><strong>3. PostgreSQL Veritabanı Konfigürasyonu</strong></p>
-
-<p>PostgreSQL veritabanı kullanmak isterseniz config/database.yml içine;</p>
-
-<pre><code>development:
- adapter: postgresql
- encoding: unicode
- database: blog_development
- pool: 5
- username: blog
- password:
-</code></pre>
-
-<p>bilgilerini eklemeniz gereklidir.</p>
-
-<ul>
-<li>Veritabanı konfigürasyonlarını tamamladıktan sonra Rails' in boş bir veritabanı
-üretmesini sağlamamız gerekli. Bunun için konsoldan;</li>
-</ul>
-
-
-<p>$ rake db:create</p>
-
-<p>komutunu veriyoruz. Bu komut bize db/ klasörü altında geliştirme ve test
-veritabanları oluşturuyor.</p>
-              
-            </div>
-         </div>
-      </div>
-      <!--#İTEM-->
-
-
-
-
-
-
-
-
-
-<!--İTEM-->
-      <div class="col-4-grid">
-         <div class="item">
-            <div class="front-end">
-              <div class="item-title">Ruby on Rails Öğreniyorum - Basit bir form uygulaması yapalım.</div>
-              <img src="http://www.abdullahvelioglu.com/icon/blog-5-1.png" alt="" />
-            </div>
-            <div class="back-end">
-              <div class="item-image">
-                <img src="http://www.abdullahvelioglu.com/icon/blog-1-2.png" alt="" />
-              </div>
-              <div class="item-title">Ruby on Rails Öğreniyorum - Basit bir form uygulaması yapalım.</div>
-              <p>Geçen ki yazılarımızda rails nedir, mvc mimarisi nedir sorusunun cevabını yazmıştık. Ayrıca rails bileşenlerini tanıyarak ruby on rails'i daha yakından inceleme fırsatı bulduk.</p> 
-
-<p><code>$ rails new blog </code> komutunu vererek projemizi oluşturmuş ve 
-<code>$ cd blog</code> komutuyla projemizin bulunduğu dizine gitmiştik.</p>
-
-
-<p>Bugün ise basit bir form uygulaması yapacağız. Uygulamaya başlamadan önce herkese Sublime Text 2 uygulamasını yüklemesini ve kodları o uygulama üzerinden yazmasını tavsiye ediyorum. </p>
-
-<h1>Ubuntu'da Sublime Text 2 nasıl yüklenir?</h1>
-
-<p>Consolda aşağıdaki kodları yazmanız yeterlidir.<br> 
-<code>sudo add-apt-repository ppa:webupd8team/sublime-text-2<br></code><code>
-sudo apt-get update</code><br>
-<code>sudo apt-get install sublime-text </code></p>
-
-<p>Sublime Text 2 'yi yükledikten sonra oluşturduğumuz proje klasörünü Sublime Text 2 ile açalım. Bu şekilde projenin içindeki dosyalara kısayoldan ulaşıp kodunu değiştirmek istediğimiz bölümlere kolaylıkla erişim sağlayabileceğiz.</p>
-
-<h1> 1 Merhaba Rail</h1>
-<h1>1.1 Web Server'i başlatmak </h1>
-<p>Projelerimizde oluşturduğumuz uygulamaları web arayüzünde nasıl görünüdüğünü görmemiz için consoldan web server'ı başlatmamız gerekiyor. Web server'ı başlattıktan sonra <a href="http://localhost:3000">http://localhost:3000</a> adresinde Ruby on Rails Başlangıç sayfasıyla karşılaşırız. 
-Web server'ı başlatmak için ise consola <code>bin/rails server</code> yazmamız yeterlidir. Ayrıca sadece <code> rails s </code> yazsanız da web server başlatılır. 
-<img src="http://www.abdullahvelioglu.com/icon/blogwebserver.png" alt="Welcome aboard screenshot"width=”50″ height=”50″ >
-Başlangıç sayfası yeni bir Rails uygulama için gereken yapılandırma ayarlarını bize sunar. Ayrıca uygulamanın özetini görmek için About linkine tıklayabilirsiniz.
-<img src="http://www.abdullahvelioglu.com/icon/blogwelcome.png" alt="Welcome aboard screenshot"width=”50″ height=”50″ >
-
-<h1>1.2 Rails'te “Hello World” Yazalım. </h1>
-
-
-<p> “Hello World” diyerek çıktı almak için en az bir adet controller ve view oluşturmanız gerekir. Controller uygulama için özel istekleri alan kısım olarak düşünülebilir. View ise son kullanıcıya hitap ettiğimiz kısımdır. Bu kısım default olarak eRuby diliyle (empedded ruby ) “gömülü ruby” yazılmıştır.</p>
-<p> Yeni bir controller oluşturmak için consola <br><code>$ bin/rails generate controller welcome index</code> yazınız. Controller oluşturunca otomatik olarak aşağıdaki dosyalar oluşur.<br>
-<code>create  app/controllers/welcome_controller.rb</code><br>
- <code>route  get 'welcome/index'</code><br>
-<code>invoke  erb</code><br>
-<code>create    app/views/welcome</code><br>
-<code>create    app/views/welcome/index.html.erb</code><br>
-<code>invoke  test_unit</code><br>
-<code>create    test/controllers/welcome_controller_test.rb</code><br>
-<code>invoke  helper</code><br>
-<code>create    app/helpers/welcome_helper.rb</code><br>
-<code>invoke  assets</code><br>
-<code>invoke    coffee</code><br>
-<code>create      app/assets/javascripts/welcome.js.coffee</code><br>
-<code>invoke    scss</code><br>
-<code>create      app/assets/stylesheets/welcome.css.scss</code><br>
-
-<p> Bu oluşturduğumuz controller dosyası <code>app/controllers/welcome_controller.rb</code> konumunda bulunuyor. View dosyası ise <code>app/views/welcome/index.html.erb</code> burada yer almaktadır. View kısmındaki <code>index.html.erb</code> dosyasını Sublime Text ile açın ve içindekileri silip yerine<br> <code>&lt;h1&gt;Hello, World&lt;/h1&gt;</code> yazın. Daha sonra <code>rails s </code> ile serveri başlatıp <a href="http://localhost:3000/welcome/index">http://localhost:3000/welcome/index</a> adresinden yazdığınız metni görebilirsiniz.Devam edecek.</p>
-
-
-              
-            </div>
-         </div>
-      </div>
-      <!--#İTEM-->
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--İTEM
-      <div class="col-4-grid">
-         <div class="item">
-            <div class="front-end">
-              <div class="item-title">Need Blog Title 2</div>
-               <img src="http://envirra.com/themes/espresso/wp-content/uploads/2015/03/13153244495_bf016e61c0_o.jpg" alt="" />
-            </div>
-            <div class="back-end">
-              <div class="item-image">
-                <img src="http://envirra.com/themes/espresso/wp-content/uploads/2015/03/13153244495_bf016e61c0_o.jpg" alt="" />
-              </div>
-              <div class="item-title">Need Blog Title 2</div>
-              <p>As for the sign-painters'<b> whales seen in the streets hanging over the shops of oil-dealers, </b>what shall be said of them? They are generally Richard III. whales, with dromedary humps, and very savage; breakfasting on three or four sailor tarts, that is whaleboats full of mariners: their deformities floundering in seas of blood and blue paint.</p>
-              
-              <p>But the placing of the cap-sheaf to all this blundering business was reserved for the scientific Frederick Cuvier, brother to the famous Baron. In 1836, he published a Natural History of Whales, in which he gives what he calls a picture of the Sperm Whale.<b> Before showing that picture to any Nantucketer,</b> you had best provide for your summary retreat from Nantucket. In a word, Frederick Cuvier's Sperm Whale is not a Sperm Whale, but a squash. Of course, he never had the benefit of a whaling voyage (such men seldom have), but whence he derived that picture, who can tell? Perhaps he got it as his scientific predecessor in the same field, Desmarest, got one of his authentic abortions; that is, from a Chinese drawing. And what sort of lively lads with the pencil those Chinese are, many queer cups and saucers inform us.</p>
-
-              <p>But these manifold mistakes in depicting the whale are not so very surprising after all. Consider! Most of the scientific drawings have been taken from the stranded fish; and these are about as correct as a drawing of a wrecked ship, with broken back, would correctly represent the noble animal itself in all its undashed pride of hull and spars. Though elephants have stood for their full-lengths, the living Leviathan has never yet fairly floated himself for his portrait. The living whale, in his full majesty and significance, is only to be seen at sea in unfathomable waters; and afloat the vast bulk of him is out of sight, like a launched line-of-battle ship; and out of that element it is a thing eternally impossible for mortal man to hoist him bodily into the air, so as to preserve all his mighty swells and undulations. And, not to speak of the highly presumable difference of contour between a young sucking whale and a full-grown Platonian Leviathan; yet, even in the case of one of those young sucking whales hoisted to a ship's deck, such is then the outlandish, eel-like, limbered, varying shape of him, that his precise expression the devil himself could not catch.</p>
-
-              <p>But it may be fancied, that from the naked skeleton of the stranded whale, accurate hints may be derived touching his true form. Not at all. For it is one of the more curious things about this Leviathan, that his skeleton gives very little idea of his general shape. Though Jeremy Bentham's skeleton, which hangs for candelabra in the library of one of his executors, correctly conveys the idea of a burly-browed utilitarian old gentleman, with all Jeremy's other leading personal characteristics; yet nothing of this kind could be inferred from any leviathan's articulated bones. In fact, as the great Hunter says, the mere skeleton of the whale bears the same relation to the fully invested and padded animal as the insect does to the chrysalis that so roundingly envelopes it. This peculiarity is strikingly evinced in the head, as in some part of this book will be incidentally shown. It is also very curiously displayed in the side fin, the bones of which almost exactly answer to the bones of the human hand, minus only the thumb. This fin has four regular bone-fingers, the index, middle, ring, and little finger. But all these are permanently lodged in their fleshy covering, as the human fingers in an artificial covering. "However recklessly the whale may sometimes serve us," said humorous Stubb one day, "he can never be truly said to handle us without mittens."</p>
-
-              <p>For all these reasons, then, any way you may look at it, you must needs conclude that the great Leviathan is that one creature in the world which must remain unpainted to the last. True, one portrait may hit the mark much nearer than another, but none can hit it with any very considerable degree of exactness. So there is no earthly way of finding out precisely what the whale really looks like. And the only mode in which you can derive even a tolerable idea of his living contour, is by going a whaling yourself; but by so doing, you run no small risk of being eternally stove and sunk by him. Wherefore, it seems to me you had best not be too fastidious in your curiosity touching this Leviathan.</p>
-            </div>
-         </div>
-      </div>
-      <!--#İTEM-->
-      
-<!--SHOW ITEM-->
-<div class="show-item">
-  <div class="show-item-close"></div>
-  <!--CONTAINER600-->
-  <div class="container600 single">
-    
+         <p align="left"><a href='http://www.abdullahvelioglu.com' style='text-decoration:none;'><font color="white">&nbsp; &nbsp; Anasayfa</font></a> </p>
+         <h1>Ben ve yazılarım</h1>
+          </div>
+
+    <div id="products">
+  <div class="category one">
+		<a href="http://www.abdullahvelioglu.com/newblog/rails" class="caption">Ruby on Rails</a>
   </div>
-  <!--#CONTAINER600-->
-  <div class="show-item-back-top"></div>
+  <div class="category two">
+    <a href="http://www.abdullahvelioglu.com/newblog/database" class="caption">Veritabanı</a>
+  </div>
+  <div class="category three">
+    <a href="http://www.abdullahvelioglu.com/newblog/htmlcss" class="caption">HTML&amp;CSS</a>
+  </div>
+	<div class="category four">
+		<a href="http://www.abdullahvelioglu.com/newblog/algorithm" class="caption">Algoritmalar</a>
+  </div>
+  <div class="category five">
+    <a href="http://www.abdullahvelioglu.com/newblog/sport" class="caption">Spor</a>
+  </div>
+  <div class="category six">
+    <a href="#"  class="caption">Yakında</a>
+  </div>
 </div>
-<!--#SHOW ITEM-->
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-        <script src="js/index.js"></script>
 
-    
-    
-    
+
+
+
+
   </body>
 </html>
