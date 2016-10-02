@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="Symbolic links, Unix ve Windows gibi sistemlerde orjinal dosyalara referans olan sembolik bağlantılar olarak adlandır..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>SYMBOLIC LINKS &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-13">13 September 2015</time>
+  <h2>SYMBOLIC LINKS</h2>
+  
+
+
+  <p>
+Symbolic links, Unix ve Windows gibi sistemlerde orjinal dosyalara referans olan sembolik bağlantılar olarak adlandırılır. Bir symbolic link kopya dosya olmayıp yalnızca orjinal dosyaya işaret eden bir bağlantıdır. Sembolik bağlantıların içeriği değiştirildiği zaman, orjinal dosyalar da otomatik olarak değişir. Symbolic link&#39; ler yapı itibari ile Windows&#39; da ki kısayollara(shortcut) benzetilir. Aynı hard link&#39; ler de olduğu gibi işletim sistemi üzerinde tek bir link üzerinden değişiklik yaparak, bağlantılı olan tüm komponentlerin kullandıkları veriler içinde bu değişikliği yansıtmaktır.
+</p>
+
+<p>
+Örnek olarak sistem üzerinde 7 versiyona sahip JRE olduğunu düşünelim. Bu JRE&#39; nin Linux üzerinde /usr/java/jre1.7.0/bin/java dosya yolu altında kayıtlı olduğunu varsayalım. Sistem de bu versiyonu kullanan java programları her defasında bu path&#39; e erişerek Javayı kullanır. Ancak güncelleme işlemi olarak, JRE 8 yüklediğimiz durumda, bu path&#39; e erişen her java programı çağrısı da update edilmek zorunda kalacaktır. Bu durumda bir symbolic link tanımlayarak mevcut java çağrıları tek bir yerden sağlanabilir. Ayrıca güncelleme oldukça mevcut linkleri yeni versiyonlar ile güncelleyebiliriz. Örnek yazının sonunda verilmiştir.
+</p>
+
+<p>
+Sembolik bağlantılar(symbolic links), aşağıda açıklanan <a href="http://www.abdullahvelioglu.com/blog/2015/09/12/hard-links/" target="_blank">Sabit Bağlantıların(Hard Links)</a> kısıtlı iki özelliğini ortadan kaldırmak için tanımlanmıştır.
+</p>
+
+<p>Daha öncede açıklandığı gibi, hard link&#39; lerin iki adet kısıtlaması bulunmaktadır. </p>
+
+<p>
+1. Bir hard link, kendi dosya sistemi dışında bulunan bir dosyaya bağlantı oluşturamaz.<br/>
+2. Bir hard link, dizinlere(directory) bağlantı oluşturamaz.
+</p>
+
+<p>
+Bir sembolik link silindiği zaman, dosyanın kendisi silinmez, yalnızca işaretçisi kaldırılır. Eğer orjinal dosya silinirse, sembolik link işaretçisinin linki kırılır(broker) ve iş göremez duruma gelir. Bu kırık linkler <i>ls</i> komutlarında kırmızı olarak boyanır.
+</p>
+
+<h3>ln Komutu</h3>
+
+<p><p>
+Unix işletim sisteminde <b>ln -s <i>item</i> <i>link_name</i></b> ifadesi bir hard link yaratır.
+<pre>
+item: file or directory
+</pre>
+<pre>
+/usr/java/jre1.7.0/bin/java
+/usr/java/jre1.8.0/bin/java</p>
+
+<p>ln -s /usr/java/jre1.8.0/bin/java java_symlink</p>
+
+<p>java_symlink -&gt; /usr/java/jre1.8.0/bin/java</p>
+
+<blockquote>
+<p>java<em>symlink program1
+java</em>symlink program2</p>
+</blockquote>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/linux/">Linux</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

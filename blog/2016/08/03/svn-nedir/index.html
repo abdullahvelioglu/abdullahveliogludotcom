@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="SVN tıpkı Git gibi bir versiyon takip sistemidir. Ortak çalışılan projelerde hızlı bir şekilde ilerlemenizi sağlayaca..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>SVN Nedir? &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2016-08-03">03 August 2016</time>
+  <h2>SVN Nedir?</h2>
+  
+
+
+  <p>SVN tıpkı Git gibi bir versiyon takip sistemidir. Ortak çalışılan projelerde hızlı bir şekilde ilerlemenizi sağlayacak olan bu sistemin tanıtımını yapıp, giriş seviyesinde kullanımından bahsedeceğim.</p>
+
+<p>SVN ile kendi localinize çektiğiniz bir projeyi editleyerek depoya gönderebilirsiniz. Gönderilen yeni dosyalar ile eski dosyalar arasındaki farkları direk eklenen ve çıkarılan satırlar olarak görüntüleyebilirsiniz.</p>
+
+<p>SVN depolarına bağlandığınızda username ve password kullanarak giriş yaptığınız için hangi değişiklikler kim tarafından yapılmış bu gibi bilgileri direk bulabilirsiniz.</p>
+
+<p>Ubuntu üzerinde kurulumu için;</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa456853602839" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+apt-get install subversion</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa456853602839-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa456853602839-1"><span class="crayon-v">apt</span><span class="crayon-o">-</span><span class="crayon-e">get </span><span class="crayon-e">install </span><span class="crayon-v">subversion</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0008 seconds] -->
+<p>komutunu terminal ekranına yazmanız yeterlidir.</p>
+
+<p>Şimdi uzakta yani bir SVN serverı üzerinde bulunan projeyi localimize nasıl çekeceğimize bakalım.</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa464576513083" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+svn checkout svn://svn_depo_linki /projenin_cekilecegi_dizin</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa464576513083-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa464576513083-1"><span class="crayon-e">svn </span><span class="crayon-e">checkout </span><span class="crayon-v">svn</span><span class="crayon-o">:</span><span class="crayon-c">//svn_depo_linki /projenin_cekilecegi_dizin</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p>şeklinde projemizi locale çekiyoruz.</p>
+
+<p>Bunu yaparken kullanabileceğiniz aşağıdaki protokoller mevcut.</p>
+
+<p><strong>“file:///”</strong> sunucu üzerinden erişim.</p>
+
+<p><strong>“http://”, &#8220;https://&#8221;  </strong>Apache servisi ile erişim.</p>
+
+<p><strong> “svn://”</strong> SVN serverına erişim.</p>
+
+<p>kullandığınız servisin tasarımına göre projenizin svn linkleri değişiklikler gösterebiliyor.</p>
+
+<p>Projenizi uzakta oluşturduğunuz bir svn projesine upload etmek için ise;</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa46c888592140" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+svn add *
+svn import svn_proje_import_edilecek_url file:///localdeki_proje -m "Comment"</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa46c888592140-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-57a18408aa46c888592140-2">2</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa46c888592140-1"><span class="crayon-e">svn </span><span class="crayon-e ">add *</span></div><div class="crayon-line crayon-striped-line" id="crayon-57a18408aa46c888592140-2"><span class="crayon-e">svn </span><span class="crayon-e">import </span><span class="crayon-e">svn_proje_import_edilecek_url </span><span class="crayon-v">file</span><span class="crayon-o">:</span><span class="crayon-c">///localdeki_proje -m "Comment"</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p>komutlarını kullanmalısınız.</p>
+
+<p>&#8220;<em>svn: warning: W150002: &#8216;dosya_dizini&#8217; is already under version control</em>&#8221; şeklinde hatalar alıyorsanız import etmeye veya add yaptığınız dosyalar içerisinde değiştirilmeyen yani son versiyonunda olan dosyalar var demektir.</p>
+
+<p>Eğer tek bir dosyayı import edecek iseniz,</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa474303085798" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+svn add dosya_adi
+svn import dosya_adi -m "Comment"</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa474303085798-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-57a18408aa474303085798-2">2</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa474303085798-1"><span class="crayon-e">svn </span><span class="crayon-e">add </span><span class="crayon-e">dosya_adi</span></div><div class="crayon-line crayon-striped-line" id="crayon-57a18408aa474303085798-2"><span class="crayon-e">svn </span><span class="crayon-e">import </span><span class="crayon-v">dosya_adi</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">m</span><span class="crayon-h"> </span><span class="crayon-s">"Comment"</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0007 seconds] -->
+<p>şeklinde etmelisiniz.</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa47a198075380" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+svn status dosya_adi</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa47a198075380-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa47a198075380-1"><span class="crayon-e">svn </span><span class="crayon-e">status </span><span class="crayon-v">dosya_adi</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p>ile ise dosyalar hakkında bilgiler alabiliyorsunuz.</p>
+
+<p>Eğer ekrana dönen çıktı sonucunda dosyanızın başında &#8216;<strong>M</strong>&#8216; harfi varsa dosyada değişiklik yapıldı, &#8216;<strong>A</strong>&#8216; harfi varsa, depoya gönderilmek için eklendi, &#8216;<strong>C</strong>&#8216; varsa çakışma oluştu, &#8216;<strong>D</strong>&#8216; varsa dosya silinecek şeklinde bilgileri edinebilirsiniz.</p>
+
+<p>SVN deposunda bulunan dosyaları listelemek için;</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa481338243895" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+svn list uzaktaki_depo_linki</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa481338243895-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa481338243895-1"><span class="crayon-e">svn </span><span class="crayon-e">list </span><span class="crayon-v">uzaktaki_depo_linki</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p>şeklindeki komutumuzu çalıştırabiliriz.</p>
+
+<p>Eğer <strong>list </strong>komutunu &#8216;<strong>-v</strong>&#8216; parametresi ile kullanırsanız;</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa487279863946" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+svn list uzaktaki_depo_linki -v</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa487279863946-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa487279863946-1"><span class="crayon-e">svn </span><span class="crayon-e">list </span><span class="crayon-v">uzaktaki_depo_linki</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">v</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p>dosya isimlerinin yanı sıra kaç versiyonu olduğunu, kim tarafından oluşturulduğunu, oluşturulma tarihini, dosya boyutunu görebilirsiniz.</p>
+
+<p>Yapılan değişikliklerin loglarını görüntülemek için ise;</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa48e314062352" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+svn log</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa48e314062352-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa48e314062352-1"><span class="crayon-e">svn </span><span class="crayon-v">log</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0005 seconds] -->
+<p>komutunu kullanabilirsiniz.</p>
+
+<p>En son yapılan değişikliğin logunu görüntülemek için;</p><!-- Crayon Syntax Highlighter v2.7.1 -->
+
+        <div id="crayon-57a18408aa494859662400" class="crayon-syntax crayon-theme-github crayon-font-ubuntu-mono crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+            <div class="crayon-toolbar" data-settings=" mouseover overlay hide delay" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 14px !important; line-height: 20px !important;">
+svn log -r HEAD</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="crayon-57a18408aa494859662400-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-57a18408aa494859662400-1"><span class="crayon-e">svn </span><span class="crayon-v">log</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">r</span><span class="crayon-h"> </span><span class="crayon-v">HEAD</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0007 seconds] -->
+<p>komutunu kullanmalısınız. Eğer belli revisiona ait logları görmek istiyorsanız &#8216;<strong>HEAD</strong>&#8216; yerine revision numarasını yazmalısınız.</p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/linux/">Linux</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

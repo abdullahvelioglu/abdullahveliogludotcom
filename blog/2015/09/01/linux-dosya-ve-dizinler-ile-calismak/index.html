@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="Linux işletim sisteminde dosya(file) ve dizin(directory) işlerinde temel olarak kullanılan 5 adet komut(command) bulu..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>LINUX DOSYA VE DIZINLER ILE CALISMAK &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-01">01 September 2015</time>
+  <h2>LINUX DOSYA VE DIZINLER ILE CALISMAK</h2>
+  
+
+
+  <p>
+Linux işletim sisteminde dosya(file) ve dizin(directory) işlerinde temel olarak kullanılan 5 adet komut(command) bulunmaktadır. Bu komutlar, kopyalama işlemi yapan <b>cp</b>, dosya taşıma ve yeniden adlandırma işlemi yapan <b>mv</b>, dosya oluşturan <b>mkdir</b>, dosya ve dizin silen <b>rm</b> ve hard ve sembolik linkler oluşturmaya yarayan <b>ln</b> komutlarıdır. Bu yazıda Linux dosya işlemlerinin temelini oluşturan bu komutların her biri anlatılacaktır.
+</p>
+
+<h3>Dizin oluşturmak - mkdir komutu</h3>
+
+<p>Bir dosya veya dizin oluşturmak için basitçe <b>mkdir</b>(make directory) komutu kullanılır. Genel formu ve örnekleri aşağıdaki gibidir.</p>
+
+<pre>
+mkdir directory...
+
+mkdir directory1
+
+mkdir directory1 directory2 directory3
+</pre>
+
+<h3>Dosya ve Dizin kopyalamak - cp komutu</h3>
+
+<p>Bazen bir GUI programına nazaran, dosya/dizin kopyalama işlemlerini <b>cp</b> komutu ile yapmak çok daha kolaylık ve hız sağlar. Özellikle <a href="http://www.abdullahvelioglu.com/blog/2015/09/03/joker-karakterler/" target="_blank">Joker Karakterler(Wildcards)</a> kullanılarak koşturulan bazı komutlar ciddi zaman kazandırır. <i>cp(copy)</i> komutunun genel formu ve örnekleri aşağıdaki gibidir.</p>
+
+<pre>
+cp source destination
+
+cp source1, source2 destination
+
+cp sources... destination
+
+Samples
+
+cp tmp/a.txt root/a.txt -> tmp altında bulunan a.txt, root altında bulunan a.txt olarak kopyalanır.
+
+cp -i tmp/a.txt root/a.txt -> eğer root altında a.txt var ise, kullanıcıdan onay istenir.
+
+cp root/a.txt root/b.txt /var/etc -> a ve b dosyaları /var/etc/ altına kopyalanır.
+
+cp root/* /var/etc -> root altındaki tüm dosyalar /var/etc altına kopyalanır.
+</pre>
+
+<p><br/>
+<p>cp komutu bir takım option&#39; lar ile birlikte kullanıldığında, farklı işlevsellikler de sağlar. Aşağıda cp komutu ile birlikte kullanılan option&#39; lar açıklanmaktadır.</p>
+<table style="border: 1px #ddd solid; padding-left:3em;">
+<th>Option</th>
+<th></th>
+<th>Tanım</th>
+<tr>
+<td>-a</td> <td>--archive</td> <td>Dosya ve dizinleri sahiplik ve hakları dahil olmak üzere tüm özellikleri(attributes) ile kopyalar.</td>
+</tr></p>
+
+<p><tr>
+<td>-i</td> <td>--interactive</td> <td>Dosyalar hedef dizin altına atılmadan önce, var olan bir dosyanın üstüne yazılıp yazılmaması konusunda(overwrite) kullanıcının onayına sunulur. Bu komut belirtilmez ise Linux dosyaları hedef dizin üzerine yazar.</td>
+</tr></p>
+
+<p><tr>
+<td>-r</td> <td>--recursive</td> <td>Dizinleri kopyalarken içindeki dosya ve dizinleri ile birlikte kopyalar. Dizin kopyalama sırasında bu komutun veya -a komutunun yazılması gereklidir.</td>
+</tr></p>
+
+<p><tr>
+<td>-u</td> <td>--update</td> <td>Bu komut ile hedef dizin altında kaynak dosyadan hiç yoksa, veya kaynak dosya hedef dizindeki dosyadan daha yeni bir sürüme sahipse çalışır.</td>
+</tr></p>
+
+<p><tr>
+<td>-v</td> <td>--verbose</td> <td>Kopyalama işlemlerini bilgi mesajı olarak ekrana basar.</td>
+</tr>
+</table>
+<h3>Dosya taşımak ve yeniden adlandırmak - mv komutu</h3>
+<p>Dosyalara yeni isim vermek ve onları bir yerden başka bir yere taşımak(kes ve yapıştır, cut and paste) istediğiniz zaman <b>mv</b>(move) komutu yazmanız yeterlidir. <b>mv</b> komutunun genel formu ve örnekleri aşağıda verilmektedir. <b>mv</b> komutu --interactive, --update ve --verbose seçenekleri(option) ile birlikte kullanıldığında zengin işlevsellik sağlar.</p>
+<pre>
+mv source destination</p>
+
+<p>mv item... directory</p>
+
+<p>mv root/a.txt root/b.txt -&gt; a dosyasının adını b olarak değiştirir.
+mv -i root/a.txt root/b.txt -&gt; a dosyasının adını b olarak değiştirmeden önce kullanıcıya sorar.
+mv root/a.txt root/b.txt /var a ve b dosyalarını /var altında taşır.
+mv dir1 dir2 -&gt; dir1 dizinini dir2 ye taşır.
+</pre>
+<table style="border: 1px #ddd solid; padding-left:3em;">
+<th>Option</th>
+<th></th>
+<th>Tanım</th>
+<tr>
+<td>-i</td> <td>--interactive</td> <td>Dosyalar hedef dizin altına taşınmadan önce, var olan bir dosyanın üstüne yazılıp yazılmaması konusunda(overwrite) kullanıcının onayına sunulur. Bu komut belirtilmez ise Linux dosyaları hedef dizin üzerine yazar.</td>
+</tr></p>
+
+<p><tr>
+<td>-u</td> <td>--update</td> <td>Bu komut ile hedef dizin altında kaynak dosyadan hiç yoksa, veya kaynak dosya hedef dizindeki dosyadan daha yeni bir sürüme sahipse çalışır.</td>
+</tr></p>
+
+<p><tr>
+<td>-v</td> <td>--verbose</td> <td>Taşıma işlemlerini bilgi mesajı olarak ekrana basar.</td>
+</tr>
+</table>
+<h3>Dosya ve Dizinleri silmek - rm komutu</h3>
+<p>Dosya ve dizinleri basitçe <b>rm</b>(remove) komutu ile silebilirsiniz. <b>rm</b> komutunun genel formu ve örnekleri aşağıda verilmektedir. <b>rm</b> komutu --interactive, --recursive, --force ve --verbose seçenekleri(option) ile birlikte kullanıldığında zengin işlevsellik sağlar.</p>
+<pre>
+rm item...</p>
+
+<p>rm root/a.txt -&gt; a dosyasını sessizce siler.
+rm -i root/a.txt -&gt; a dosyasını silmeden önce kullanıcıya sorar.
+rm -r root/a.txt /tmp-&gt; a dosyasını ve tmp dizinini siler.
+rm -rf root/a.txt /tmp -&gt;
+</pre>
+<table style="border: 1px #ddd solid; padding-left:3em;">
+<th>Option</th>
+<th></th>
+<th>Tanım</th>
+<tr>
+<td>-i</td> <td>--interactive</td> <td>Dosyalar veya dizinler silinmeden önce kullanıcının onayına sunulur.</td>
+</tr></p>
+
+<p><tr>
+<td>-r</td> <td>--recursive</td> <td>Dosya ve dizinler altındaki dosya ve dizinler ile birlikte silinir.</td>
+</tr></p>
+
+<p><tr>
+<td>-f</td> <td>--force</td> <td>Dosyaları bulunmasa bile, kullanıcıya sormadan siler. --interactive seçeneğini devre dışı bırakır.</td>
+</tr></p>
+
+<p><tr>
+<td>-v</td> <td>--verbose</td> <td>Silme işlemlerini bilgi mesajı olarak ekrana basar.</td>
+</tr>
+</table>
+<h3>Link oluşturma - ln komutu</h3>
+<p>Linux sisteminizde dosya ve dizinleri temsil eden bağlantı dosyaları oluşturabilirsiniz. Bunun için <a href="http://www.abdullahvelioglu.com/blog/2015/09/12/hard-links/" target="_blank">Hard Links</a> ve  <a href="http://www.abdullahvelioglu.com/blog/2015/09/13/symbolic-links/" target="_blank">Symbolic Links</a> kavramları bulunur. Linklerin genel formu aşağıda verilmektedir. </p>
+<pre>
+ln file link -&gt; hard link oluşturur</p>
+
+<p>ln -s item link -&gt; symbolic link oluşturur.
+</pre><br/></p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/linux/">Linux</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

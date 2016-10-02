@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="Hard links, Unix ve Windows gibi sistemlerde bir dosyaya bir den fazla isim ataması yaparak, orjinal dosyalara kopya ..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>HARD LINKS &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-12">12 September 2015</time>
+  <h2>HARD LINKS</h2>
+  
+
+
+  <p>
+Hard links, Unix ve Windows gibi sistemlerde bir dosyaya bir den fazla isim ataması yaparak, orjinal dosyalara kopya referans olan sabit bağlantılar olarak adlandırılır. Unix sistemlerde varsayılan olarak, her dosya kendi ismi ile en az 1 adet hard linke sahiptir. Bir hard link, orjinal dosyanın bir kopyasıdır ve içeriği değiştirildiği zaman, orjinal dosya da otomatik olarak değişir. Bunun anlamı, işletim sistemi üzerinde tek bir link üzerinden değişiklik yaparak, bağlantılı olan tüm komponentlerin kullandıkları veriler içinde bu değişikliği yansıtmaktır. Örneğin A dosyasına işaret eden bir hard linkin içeriğindeki değişiklik, orjinal A dosyasının içeriğine de yansır. Hard linkler silindiği zaman, orjinal dosya silinmez, yalnızca hard linkin kendisi silinir.
+</p>
+
+<p>Hard link&#39; lerin iki adet kısıtlaması bulunmaktadır. </p>
+
+<p>
+1. Bir hard link, kendi dosya sistemi dışında bulunan bir dosyaya bağlantı oluşturamaz.<br/>
+2. Bir hard link, dizinlere(directory) bağlantı oluşturamaz.
+</p>
+
+<p>
+Hard linkler genellikle yedek alma(backup) işlemlerinde kullanılmaktadır. Dosya kopyaları oluşturması ve eski bir metodoloji olduklarından kullanım alanları <a href="http://www.abdullahvelioglu.com/blog/2015/09/13/symbolic-links/" target="_blank">Sembolik Linkler(Symbolic Links)</a> kadar yaygın değildir.
+</p>
+
+<h3>ln Komutu</h3>
+
+<p><p>
+Unix işletim sisteminde <b>ln <i>file<em>name</i> <i>link</em>name</i></b> ifadesi bir hard link yaratır.</p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/linux/">Linux</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

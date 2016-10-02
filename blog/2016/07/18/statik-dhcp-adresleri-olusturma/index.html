@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="Static kelimesi değişmeyen, durağan, sabit anlamına gelmektedir. Örneğin “pfSense” üzerinden internete çıkan tüm iste..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>Statik DHCP Adresleri Oluşturma &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2016-07-18">18 July 2016</time>
+  <h2>Statik DHCP Adresleri Oluşturma</h2>
+  
+
+
+  <p>Static kelimesi değişmeyen, durağan, sabit anlamına gelmektedir. Örneğin “pfSense” üzerinden internete çıkan tüm istemcilere farklı özellikler atamanız gerekirse bu durumda istemcilerin ip adreslerinin veya mac adreslerinin bilinmesi gerekir.<span id="more-622"></span> İstemciler her yeniden başlatıldığında otomatik olarak bir ip adresi alacaktır. Bu farklı ip adreslerini takip etmek oldukça sorunlu olacaktır. Bu durumda istemcilere sabit bir ip adresi atanırsa onlar için farklı kural ve özellik atamaları daha kolay olacaktır. İşte bu durumda “pfSense” ile istemcilere istenilen ip adresleri rahatlıkla atanabilir.</p>
+
+<p>Yalnız burada dikkat etmeniz gereken önemli bir nokta vardır. Bir istemciye “pfSense” üzerinden bir ip atayacaksanız atayacağınız bu ip DHCP aralığında belirtilen ip aralığı dışında olmalıdır. Yani “Services -&gt; DHCP server” adımlarını takip edip açılan “Services: DHCP server” sayfasındaki “Range” aralığının dışında bir adres olmalıdır. Örneğin “Range” aralığınız “20.20.20.10 – 20.20.20.50” ise tanımlayacağını ip adresleri bu aralığın dışında olmalıdır.</p>
+
+<p>Sisteminize bağlı istemcilerin otomatik olarak belirlediğiniz “Range” aralığından IP adresi almasını istiyorsanız “<strong>Deny unknown clients</strong>” seçeneğinin aktif olmaması gerekir. Bu seçeneğin çek işaretini kaldırdığınızda artık sisteminize bağlanan istemciler otomatik olarak IP adresi alacaklardır. PfSense sisteminize bağlı olan ve otomatik olarak ip adresi alan istemcileri görmeniz gerekirse “Status -&gt; DHCP Leases” adımlarını takip ederek “Status: DHCP leases” sayfasının açılmasını sağlayın. Açılan bu sayfada o anda “pfSense” sisteminize bağlı olan istemciler gösterilecektir. Ayrıca yine sisteminizde sizin daha önceden atadığınız sabit ip adresli istemcileri de görebilirsiniz.</p>
+
+<div id="attachment_624" style="width: 310px" class="wp-caption alignnone"><a href="http://www.abdullahvelioglu.com/blog/public/images/DHCP1.png"><img class="size-medium wp-image-624" src="http://www.abdullahvelioglu.com/blog/public/images/DHCP1.png" alt="Resim 1: Statik DHCP Adresleri Oluşturma" width="300" height="83" srcset="http://www.abdullahvelioglu.com/blog/public/images/DHCP1.png 300w, http://www.abdullahvelioglu.com/blog/public/images/DHCP1.png 778w" sizes="(max-width: 300px) 100vw, 300px" /></a><p class="wp-caption-text">Resim 1: Statik DHCP Adresleri Oluşturma</p></div>
+
+<p>“Status: DHCP leases” sayfasındaki bu gurubu incelememiz gerekirse:</p>
+
+<p><strong>IP address (IP adresleri): </strong>PfSense sistemine bağlı olan veya daha önceden “pfSense” sisteminden ip adresi alan tüm istemcilerin almış veya atanmış ip adreslerinin görüntülendiği alandır.</p>
+
+<p><strong>MAC address (MAC adresleri): </strong>PfSense sistemine bağlı olan veya daha önceden “pfSense” sisteminden ip adresi alan tüm istemcilerin MAC adreslerinin görüntülendiği alandır. Ayrıca sisteme artık bağlı olmayan istemcilerin MAC adresleri kırmızı olarak gösterilecektir.</p>
+
+<p><strong>Hostname (Ana bilgisayar adı): </strong>Sisteminize bağlanan istemcilerin adlarının listelendiği alandır.</p>
+
+<p><strong>Start (Başlangıç): </strong>Sisteme bağlanan istemcilerin hangi tarih ve saatte sisteme bağlandığının gösterildiği alandır.</p>
+
+<p><strong>End (Bitiş): </strong>Sisteme bağlanan istemcilerin hangi tarih ve saatte sistemden bağlantısının kesildiğini gösteren alandır.</p>
+
+<p><strong>Online (Çevrim içi): </strong>Sisteme bağlı olan istemcilerin “online” artık bağlı olmayan istemcilerin ise “ofline” şeklinde gösterildiği alandır. Kimlerin o anda internete çıktığını bu alandan anlayabilirsiniz.</p>
+
+<p><strong>Lease Type (Kira Türü): </strong>Sisteminize bağlı olan istemcilerin nasıl bir kira aldığını yani ip adresini aldığını gösteren alandır. “Active” ise otomatik olarak bir ip adresi aldığı anlamına gelir. Eğer “static” yazıyorsa sizin tarafınızdan bir ip adresi atandığı anlamına gelir.</p>
+
+<div id="attachment_625" style="width: 310px" class="wp-caption alignnone"><a href="http://www.abdullahvelioglu.com/blog/public/images/DHCP2.png"><img class="size-medium wp-image-625" src="http://www.abdullahvelioglu.com/blog/public/images/DHCP2.png" alt="Resim 2: Statik DHCP Adresleri Oluşturma" width="300" height="68" srcset="http://www.abdullahvelioglu.com/blog/public/images/DHCP2.png 300w, http://www.abdullahvelioglu.com/blog/public/images/DHCP2.png 944w" sizes="(max-width: 300px) 100vw, 300px" /></a><p class="wp-caption-text">Resim 2: Statik DHCP Adresleri Oluşturma</p></div>
+
+<p>Otomatik olarak ip adresi alan bir istemcinin artık sabit bir ip almasını istiyorsanız bu durumda o istemcinin karşısında bulunan “add a static mapping for this MAC address (bu MAC adresi için sabit bir eşleşme ekle)” düğmesine tıklamanız yeterlidir. Bu durumda “Services: DHCP: Edit static mapping” sayfası açılacaktır. Açaılan bu sayfadaki “Static DHCP Mapping” grubunu kullanarak ayarlarınızı yapabilirsiniz.</p>
+
+<div id="attachment_626" style="width: 310px" class="wp-caption alignnone"><a href="http://www.abdullahvelioglu.com/blog/public/images/DHCP3.png"><img class="size-medium wp-image-626" src="http://www.abdullahvelioglu.com/blog/public/images/DHCP3.png" alt="Resim 3: Statik DHCP Adresleri Oluşturma" width="300" height="112" srcset="http://www.abdullahvelioglu.com/blog/public/images/DHCP3.png 300w, http://www.abdullahvelioglu.com/blog/public/images/DHCP3.png 784w" sizes="(max-width: 300px) 100vw, 300px" /></a><p class="wp-caption-text">Resim 3: Statik DHCP Adresleri Oluşturma</p></div>
+
+<p>Bu alanda istemciniz MAC adresi otomatik olarak “MAC address” alanına gelecektir. Eğer bulunduğunuz bilgisayarın MAC adresinin bu alana gelmesini istiyorsanız “Copy my MAC address” başlığına tıklamanız yeterlidir. Yalnız burada dikkatli olmalısınız “Copy my MAC address” adresi istediğiniz bir istemcinin değil şu anda işlem yaptığınız istemcinin MAC adresini bu alana getirecektir.</p>
+
+<p>“IP address” alanına “Range” aralığı dışındaki bir IP adresini atayarak istemcinize ip adresi verebilirsiniz. “Hostname” istemcinin ağ üzerindeki adıdır. Bu genellikle örneğin Windows istemcilerin “Tam bilgisayar adıdır”. “Description” istemci için bir açıklama yazacağınız alandır. Daha sonradan size bu istemci ile ilgili hatırlamanız gereken bilgi girebileceğiniz alandır.</p>
+
+<p>İşlemleriniz bittikten sonra sayfa altında bulunan “Save” düğmesine tıklamanız yeterlidir. Bu durumda yaptığınız ayarlar kaydedilecek ve “Services: DHCP server” sayfasına yönlendirileceksiniz. Yaptığınız bu ayarların uygulanabilmesi için bu sayfadaki “<strong>Apply changes (Değişiklikleri uygula)</strong>” düğmesine tıklamalısınız. Bu durumda yaptığınız değişiklikler kabul edilecek ve sabit ip atadığınız istemciler bulunduğunuz sayfanın en altında bulunan “DHCP Static Mappings for this interface (Bu ara birim için DHCP statik dönüşümler)” alanında görüntülenecektir.</p>
+
+<div id="attachment_627" style="width: 310px" class="wp-caption alignnone"><a href="http://www.abdullahvelioglu.com/blog/public/images/DHCP4.png"><img class="size-medium wp-image-627" src="http://www.abdullahvelioglu.com/blog/public/images/DHCP4.png" alt="Resim 4: Statik DHCP Adresleri Oluşturma" width="300" height="72" srcset="http://www.abdullahvelioglu.com/blog/public/images/DHCP4.png 300w, http://www.abdullahvelioglu.com/blog/public/images/DHCP4.png 730w" sizes="(max-width: 300px) 100vw, 300px" /></a><p class="wp-caption-text">Resim 4: Statik DHCP Adresleri Oluşturma</p></div>
+
+<p>“DHCP Static Mappings for this interface (Bu ara birim için DHCP statik dönüşümler)” grubu içerisinde sabit ip alan bütün istemcilerinizi görebilirsiniz. Eğer biri üzerinde değişiklik yapmak isterseniz o istemcinin karşısında bulunan ve üzerinde “e” harfi olan düğmeye tıklamanız yeterlidir. Bu durumda o istemci ile ilgili değişiklik yapabileceğiniz “Services: DHCP: Edit static mapping” sayfası açılacaktır. Eğer bir istemcinin artık sabit ip aralığından kaldırılmasını istiyorsanız üzerinde “x” harfi olan düğmeye tıklayabilirsiniz. Eğer farklı bir istemciye bir ip adresi ekleyecekseniz “Status -&gt; DHCP Leases” adımları takip edebilir veya buradan üzerinde “+” işareti olan düğmeye tıklayarak da istediğiniz bir istemciye ip adresi atayabilirsiniz.</p>
+
+<p><strong>Birkaç Not</strong></p>
+
+<p>PfSense ile bir güvenlik duvarı oluşturacaksanız tüm istemcilere özellikle MAC adreslerine göre sabit ip adresleri atamakta yarar vardır.</p>
+
+<p>Eğer sabit ip adresi atamak istemiyorsanız yani tüm istemcilerin otomatik ip adresi almasını istiyorsanız “Services -&gt; DHCP servers” adımlarını takip ederek “Services: DHCP server” sayfasının açılmasını sağlayın. Açılan bu sayfada sadece aşağıdaki seçenekleri düzenleyin:</p>
+
+<ul>
+<li>Enable DHCP server on LAN interface: Seçili</li>
+<li>Range: Dağıtılacak ip aralığınızı tanımlayın</li>
+</ul>
+
+<p>Sadece sizin belirlediğiniz istemcilerin internete çıkmasını ve diğer tüm istemcilerin internetini engellemek istiyorsanız “Services -&gt; DHCP servers” adımlarını takip ederek “Services: DHCP server” sayfasının açılmasını sağlayın. Açılan bu sayfada sadece aşağıdaki seçenekleri düzenleyin:</p>
+
+<p><ul>
+<li>Enable DHCP server on LAN interface: Seçili</li>
+<li><strong>Deny unknown clients: Seçili</strong></li>
+<li>Range: İlk ip adresi örneğin “pfSense” LAN bacağı ve ikinci ip adresi yine “pfSense” LAN bacağı olmalı. (20.20.20.1 – 20.20.20.1 gibi)</li>
+<li>Static ARP: Enable Static ARP entries<strong>: </strong>Seçili</li>
+<li>“DHCP Static Mappings for this interface (Bu ara birim için DHCP statik dönüşümler)” alanında internete çıkacak olan istemciler ve ip adresleri belirlenmiş olmalıdır.</li></p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/networking/">Networking</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

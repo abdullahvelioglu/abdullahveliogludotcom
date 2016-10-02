@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="Webhooks are great! They are a perfect way for API services like Twilio to notify your application of events such as ..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>USE NGROK &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-19">19 September 2015</time>
+  <h2>USE NGROK</h2>
+  
+
+
+  <p>Webhooks are great! They are a perfect way for API services like Twilio to notify your application of events such as incoming calls or text messages. The one difficulty is that when you are developing an application that consumes webhooks you need a publicly accessible URL to configure the webhook service with. Typically you would develop on localhost and the rest of the world would have no access to your application, so how do you test your webhooks?</p>
+
+<p>Well, that&#8217;s where <a href="http://ngrok.com" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://ngrok.com', 'ngrok');">ngrok</a> comes in. ngrok is a free tool that allows us to tunnel from a public URL to our application running locally. Here&#8217;s my 6 favourite things about ngrok:</p>
+
+<h3>1. It&#8217;s really easy to install and use</h3>
+
+<p>ngrok is built in Go so it is packaged as binaries for each major platform. To install ngrok do the following:</p>
+
+<ol start="1">
+<li>Download the package for your system</li>
+<li>Unzip the package</li>
+<li>There is no step 3!</li>
+</ol>
+
+<p>Well, there is no step 3 if you have a Mac or Linux, if you&#8217;re on Windows you might have a bit more work to do. Thankfully Devin&#8217;s got you covered with his post on <a href="https://www.twilio.com/blog/2014/03/configure-windows-for-local-webhook-testing-using-ngrok.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.twilio.com/blog/2014/03/configure-windows-for-local-webhook-testing-using-ngrok.html', 'how to configure ngrok on Windows');">how to configure ngrok on Windows</a>.</p>
+
+<p>Once you have ngrok installed, using it to tunnel to an application running on, say, port 3000 is as easy as:</p>
+
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+        <div id="crayon-56f7004143828300191161" class="crayon-syntax crayon-theme-github crayon-font-consolas crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover expand" style=" margin-top: 12px; margin-bottom: 12px; font-size: 16px !important; line-height: 24px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+            <div class="crayon-info" style="min-height: 22.4px !important; line-height: 22.4px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 16px !important; line-height: 24px !important;">
+$ ./ngrok http 3000 </textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 16px !important; line-height: 24px !important;"><div class="crayon-num" data-line="crayon-56f7004143828300191161-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 16px !important; line-height: 24px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-56f7004143828300191161-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-sy">.</span><span class="crayon-o">/</span><span class="crayon-e">ngrok </span><span class="crayon-i">http</span><span class="crayon-h"> </span><span class="crayon-cn">3000</span><span class="crayon-h"> </span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0005 seconds] -->
+<p></p>
+
+<p><img alt="" src="https://www.twilio.com/blog/wp-content/uploads/2015/09/pcfN6-tEo2KeP098NVVDnphhrBEikAozN5eadlnLSyUBoPkNKJmTvCZRkcKVZ9bcZVGTQGPWUEiqyYy7RLmQPkDdGa3f3aGo8HI9QZEp1f1EQ1aj89b8xT8aeyEIXEAmV6GeNec.png" class="aligncenter"></p>
+
+<h4>Bonus install tip!</h4>
+
+<p>Once you&#8217;ve unzipped the ngrok executable move it to a folder that&#8217;s in your
+            <span id="crayon-56f7004143838684197419" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-consolas" style="font-size: 16px !important; line-height: 24px !important;font-size: 16px !important;"><span class="crayon-pre crayon-code" style="font-size: 16px !important; line-height: 24px !important;font-size: 16px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><span class="crayon-sy">$</span><span class="crayon-v">PATH</span></span></span> then you can run ngrok from anywhere you want on the command line by just typing:</p>
+
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+        <div id="crayon-56f700414383e864243412" class="crayon-syntax crayon-theme-github crayon-font-consolas crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover expand" style=" margin-top: 12px; margin-bottom: 12px; font-size: 16px !important; line-height: 24px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+            <div class="crayon-info" style="min-height: 22.4px !important; line-height: 22.4px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 16px !important; line-height: 24px !important;">
+$ ngrok http 3000</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 16px !important; line-height: 24px !important;"><div class="crayon-num" data-line="crayon-56f700414383e864243412-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 16px !important; line-height: 24px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-56f700414383e864243412-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">ngrok </span><span class="crayon-i">http</span><span class="crayon-h"> </span><span class="crayon-cn">3000</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+
+<p><img alt="" src="https://www.twilio.com/blog/wp-content/uploads/2015/09/CYFBfS4QQvrD711cuu-kcYci9n5RCjXh6vugK7rKWqrd_1fdaBe9E7UO6jxDXbelrtKqNOBlX8aqciJjkCskMGsaQHw-EdC9tNn1ZDY0THYH3RID-6YgNn7oAm6YR5ORY5Uz1T0.png"  class="aligncenter"></p>
+
+<p>If you want a more in depth article on how to hook up ngrok with your Twilio apps, check out <a href="https://www.twilio.com/blog/2013/10/test-your-webhooks-locally-with-ngrok.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.twilio.com/blog/2013/10/test-your-webhooks-locally-with-ngrok.html', 'Kevin&#8217;s post on getting started with ngrok');">Kevin&#8217;s post on getting started with ngrok</a>. Watch out though, as the commands have changed with the release of ngrok 2. You can follow the post, but substitute the syntax above to make sure it works.</p>
+
+<h3>2. It has a dashboard</h2>
+<p>When you start up ngrok it shows you the URL you are tunnelling through and another local URL, <a href="http://127.0.0.1:4040" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://127.0.0.1:4040', 'http://127.0.0.1:4040');">http://127.0.0.1:4040</a>. Open that up and gaze in wonder at the dashboard in front of you.</p>
+<p>The dashboard allows you to see the status of your tunnel, the requests you have made through it and the responses that came back from your application. Great for debugging misfiring webhook endpoints.</p>
+<p><img alt="" src="https://www.twilio.com/blog/wp-content/uploads/2015/09/cvXMKZgOL1WcqwRT11PurbiZf9PBGmYBUU5RKzs3IMGrYIspO10mwHLqAsGKuYJWwYoHoThozjEPbTRZQuwwn-Vm51-Hl8YpU15gQ30UzbkJ6ZJXIO-5AgcogGfUm-BoBEPPlUs.png" class="aligncenter"></p>
+<h3>3. You can replay requests</h3>
+
+<p>Take a look again at that dashboard. Not only can you inspect requests that came through the ngrok tunnel, you can replay them.</p>
+
+<p>Now when your SMS endpoint is misbehaving, rather than sending another message and then another message until you get it right, you can just replay the incoming request from the dashboard.</p>
+
+<p><img alt="" src="https://www.twilio.com/blog/wp-content/uploads/2015/09/saDypdxF-y3YfyT3XcB7imRdcebTf1ux0t1KdYHdp-pOedscavFOz2U_fXIm6sujudLrtL8sAlEac1d1_AMaQlCGpOYBbfQfQ39S0ZZod61nshMkITY3MRpHaQ0mIg8fFwzL6QU.png" class="aligncenter"></p>
+
+<h3>4. You can secure your tunnels</h3>
+
+<p>Worried about someone snooping on the super secret app you&#8217;re developing but still need to open a tunnel to check something? Stop worrying right now and check this out!</p>
+
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+        <div id="crayon-56f7004143846687795550" class="crayon-syntax crayon-theme-github crayon-font-consolas crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover expand" style=" margin-top: 12px; margin-bottom: 12px; font-size: 16px !important; line-height: 24px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+            <div class="crayon-info" style="min-height: 22.4px !important; line-height: 22.4px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 16px !important; line-height: 24px !important;">
+$ ngrok http -auth "user:password" 3000</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 16px !important; line-height: 24px !important;"><div class="crayon-num" data-line="crayon-56f7004143846687795550-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 16px !important; line-height: 24px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-56f7004143846687795550-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">ngrok </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-i">auth</span><span class="crayon-h"> </span><span class="crayon-s">"user:password"</span><span class="crayon-h"> </span><span class="crayon-cn">3000</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p></p>
+
+<p>Boom! Your tunnel is now protected using HTTP auth. Noone&#8217;s spying on your business!</p>
+
+<p><img alt="" src="https://www.twilio.com/blog/wp-content/uploads/2015/09/9YGMD12A4xmleGJ-9ShNXRVpc4KbIKiqkTuZvjcsF5ns4Q6uTjKqpcfCGRXD6h1yZDcTg8pkZBQ4sIKCd468jvzWCkWv9RncHlV42JTtNui4ksC5Ar82pyBquw4T0uXsgtPEeSI.png" class="aligncenter"></p>
+
+<h3>Pro tips!</h3>
+
+<p>We&#8217;ve got into the pro tips section. Why are these &#8220;pro&#8221; tips? Because you need an ngrok pro account to use them! ngrok is always free to use, but to make sure it&#8217;s sustainable, some sweet features have been held back for paying customers.</p>
+
+<p>Check out the <a href="https://ngrok.com/product#pricing" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://ngrok.com/product#pricing', 'available plans');">available plans</a> and then check out my favourite feature below.</p>
+
+<h3>5. [Pro tip] You can use custom subdomains</h3>
+
+<p>Getting a new random subdomain every time you power up ngrok can be frustrating. Reconfiguring a webhook service every time you want to test is a total pain.</p>
+
+<p>As a paying customer, ngrok allows you to use a custom subdomain, simply by providing it in the command. If you have a paid ngrok account try this out:</p>
+
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+        <div id="crayon-56f700414384d067483055" class="crayon-syntax crayon-theme-github crayon-font-consolas crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover expand" style=" margin-top: 12px; margin-bottom: 12px; font-size: 16px !important; line-height: 24px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+            <div class="crayon-info" style="min-height: 22.4px !important; line-height: 22.4px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 16px !important; line-height: 24px !important;">
+$ ngrok http -subdomain=thisisreallycool 3000</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 16px !important; line-height: 24px !important;"><div class="crayon-num" data-line="crayon-56f700414384d067483055-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 16px !important; line-height: 24px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-56f700414384d067483055-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">ngrok </span><span class="crayon-v">http</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-v">subdomain</span><span class="crayon-o">=</span><span class="crayon-i">thisisreallycool</span><span class="crayon-h"> </span><span class="crayon-cn">3000</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p></p>
+
+<p>Take a look at the ngrok dashboard and hold on to your hat, you&#8217;re now tunneling through the domain <a href="http://thisisreallycool.ngrok.io" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://thisisreallycool.ngrok.io', 'http://thisisreallycool.ngrok.io');">http://thisisreallycool.ngrok.io</a>.</p>
+
+<p><img alt="" src="https://www.twilio.com/blog/wp-content/uploads/2015/09/DS8HP2ZbolAKwWxENglE-R0F0lRNxcgZ2D99q-gzsfLDRqHxWbLLbAnxfBSEX1NSAadQ0QLhBs5kz2qWFyM1J9JsSWEGHG2foZCmn96xBfsG6KeDYW8J4TOlP59a3WQLQ6lCvs0.png" class="aligncenter"></p>
+
+<h3>6. [Pro tip] You can configure all this to happen automatically</h3>
+
+<p>Now you know and love ngrok subdomain but you&#8217;re looking at that command thinking, &#8220;That&#8217;s a lot of typing every time and I&#8217;ve got to remember the arguments!&#8221;</p>
+
+<p>Do not worry, this next feature is for you.</p>
+
+<p>ngrok can actually read a bunch of useful stuff from a configuration file. If you have created a paid account and added your authtoken then you will have the config file
+            <span id="crayon-56f7004143854883296992" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-consolas" style="font-size: 16px !important; line-height: 24px !important;font-size: 16px !important;"><span class="crayon-pre crayon-code" style="font-size: 16px !important; line-height: 24px !important;font-size: 16px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><span class="crayon-sy">.</span><span class="crayon-v">ngrok2</span><span class="crayon-o">/</span><span class="crayon-v">ngrok</span><span class="crayon-sy">.</span><span class="crayon-v">yml</span></span></span> in your
+            <span id="crayon-56f700414385a252998500" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-consolas" style="font-size: 16px !important; line-height: 24px !important;font-size: 16px !important;"><span class="crayon-pre crayon-code" style="font-size: 16px !important; line-height: 24px !important;font-size: 16px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><span class="crayon-sy">$</span><span class="crayon-v">HOME</span></span></span> directory.</p>
+
+<p>Now, we can recreate the subdomain config under a named tunnel, open up
+            <span id="crayon-56f7004143860297158984" class="crayon-syntax crayon-syntax-inline  crayon-theme-github crayon-theme-github-inline crayon-font-consolas" style="font-size: 16px !important; line-height: 24px !important;font-size: 16px !important;"><span class="crayon-pre crayon-code" style="font-size: 16px !important; line-height: 24px !important;font-size: 16px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><span class="crayon-o">~</span><span class="crayon-o">/</span><span class="crayon-sy">.</span><span class="crayon-v">ngrok2</span><span class="crayon-o">/</span><span class="crayon-v">ngrok</span><span class="crayon-sy">.</span><span class="crayon-v">yml</span></span></span> and paste in the following under the authtoken:</p>
+
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+        <div id="crayon-56f7004143866975342848" class="crayon-syntax crayon-theme-github crayon-font-consolas crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover expand" style=" margin-top: 12px; margin-bottom: 12px; font-size: 16px !important; line-height: 24px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+            <div class="crayon-info" style="min-height: 22.4px !important; line-height: 22.4px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 16px !important; line-height: 24px !important;">
+tunnels:
+  cool:
+    proto: http
+    addr: 3000
+    subdomain: thisisreallycool</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 16px !important; line-height: 24px !important;"><div class="crayon-num" data-line="crayon-56f7004143866975342848-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-56f7004143866975342848-2">2</div><div class="crayon-num" data-line="crayon-56f7004143866975342848-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-56f7004143866975342848-4">4</div><div class="crayon-num" data-line="crayon-56f7004143866975342848-5">5</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 16px !important; line-height: 24px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-56f7004143866975342848-1"><span class="crayon-v">tunnels</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="crayon-56f7004143866975342848-2"><span class="crayon-h"> </span> <span class="crayon-v">cool</span><span class="crayon-o">:</span></div><div class="crayon-line" id="crayon-56f7004143866975342848-3"><span class="crayon-h"> </span> <span class="crayon-h"> </span> <span class="crayon-v">proto</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-i">http</span></div><div class="crayon-line crayon-striped-line" id="crayon-56f7004143866975342848-4"><span class="crayon-h"> </span> <span class="crayon-h"> </span> <span class="crayon-v">addr</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-cn">3000</span></div><div class="crayon-line" id="crayon-56f7004143866975342848-5"><span class="crayon-h"> </span> <span class="crayon-h"> </span> <span class="crayon-v">subdomain</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">thisisreallycool</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0010 seconds] -->
+<p></p>
+
+<p>Now you can run:</p>
+
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+        <div id="crayon-56f700414386c348382055" class="crayon-syntax crayon-theme-github crayon-font-consolas crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover expand" style=" margin-top: 12px; margin-bottom: 12px; font-size: 16px !important; line-height: 24px !important;">
+
+            <div class="crayon-toolbar" data-settings=" show" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><span class="crayon-title"></span>
+            <div class="crayon-tools" style="font-size: 16px !important;height: 24px !important; line-height: 24px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div><span class="crayon-language">Shell</span></div></div>
+            <div class="crayon-info" style="min-height: 22.4px !important; line-height: 22.4px !important;"></div>
+            <div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2; font-size: 16px !important; line-height: 24px !important;">
+$ ngrok start cool</textarea></div>
+            <div class="crayon-main" style="">
+                <table class="crayon-table">
+                    <tr class="crayon-row">
+                <td class="crayon-nums " data-settings="show">
+                    <div class="crayon-nums-content" style="font-size: 16px !important; line-height: 24px !important;"><div class="crayon-num" data-line="crayon-56f700414386c348382055-1">1</div></div>
+                </td>
+                        <td class="crayon-code"><div class="crayon-pre" style="font-size: 16px !important; line-height: 24px !important; -moz-tab-size:2; -o-tab-size:2; -webkit-tab-size:2; tab-size:2;"><div class="crayon-line" id="crayon-56f700414386c348382055-1"><span class="crayon-sy">$</span><span class="crayon-h"> </span><span class="crayon-e">ngrok </span><span class="crayon-e">start </span><span class="crayon-v">cool</span></div></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!-- [Format Time: 0.0004 seconds] -->
+<p></p>
+
+<p>and your tunnel will start up with the options you supplied in the yml file.</p>
+
+<p><img alt="" src="https://www.twilio.com/blog/wp-content/uploads/2015/09/2K6nthEkNVn7F8eeR135fFrSxySWZtWNAosWEY-Jeq16TqzU3CFm-VNNIltW_YJrMWxYJOop6Cg0uUyZufS1y-1sH1hVcz4utDTVPUbbKOMaWiYjY2S5kUcRlmGo7wAVSMhfW5I.png" class="aligncenter"></p>
+
+<h3>ngrok is the best!</h3>
+
+<p>Now you know the power of ngrok testing your webhooks will never be the same again. If you want to learn more about ngrok you can find more features in the <a href="https://ngrok.com/docs" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://ngrok.com/docs', 'ngrok documentation');">ngrok documentation</a>. And why not check out this video of <a href="https://twitter.com/inconshreveable" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://twitter.com/inconshreveable', 'Alan Shreve');">Alan Shreve</a>, creator of ngrok, speaking about <a href="https://www.twilio.com/signal/2015/videos/the-making-of-ngrok" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.twilio.com/signal/2015/videos/the-making-of-ngrok', 'the making of ngrok');">the making of ngrok</a> at Twilio&#8217;s <a href="https://www.twilio.com/signal/2015" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://www.twilio.com/signal/2015', 'Signal Conference');">Signal Conference</a> earlier this year.</p>
+
+<p>If you have any other ngrok tips I&#8217;d love it if you would share them with me at <a href="https://twitter.com/abdvel" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://twitter.com/abdvel', '@abdvel');">@abdvel</a>. Bye for now!</p>
+
+<p><img alt="https://media.giphy.com/media/k0FUxvaxaFJW8/giphy.gif" src="https://www.twilio.com/blog/wp-content/uploads/2015/09/vrI60feqbVRdjP3mbcm3Px_L0PdVjgX2tipqJtvwiTV0xvPbaBuZqz_zWgGF4_iKCrljNgWj_P8S688eWvaJdpmxlDnurRxBV1fP5Zmt_BvSX5bGQdRbtRJ3SQVgBMzdylx7SOY.png" class="aligncenter"></p>
+
+<p>Bu gönderinin orjinal halini <a href="https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html">https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html</a> adresinden görebilirsiniz.</p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/web/">Web Programlama</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

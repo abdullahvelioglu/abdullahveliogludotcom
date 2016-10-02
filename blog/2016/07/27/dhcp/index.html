@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="DHCP Nedir?DHCP (İngilizce Dynamic Host Configuration Protocol), basit olarak sistemdeki bilgisayarlara IP adreslerin..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>DHCP &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2016-07-27">27 July 2016</time>
+  <h2>DHCP</h2>
+  
+
+
+  <h2><P class="p1 ft0">DHCP Nedir?</P></h2>
+
+<P class="p2 ft4"><SPAN class="ft1">DHCP </SPAN>(İngilizce <SPAN class="ft2">D</SPAN><SPAN class="ft3">ynamic </SPAN><SPAN class="ft2">H</SPAN><SPAN class="ft3">ost </SPAN><SPAN class="ft2">C</SPAN><SPAN class="ft3">onfiguration </SPAN><SPAN class="ft2">P</SPAN><SPAN class="ft3">rotocol</SPAN>), basit olarak sistemdeki bilgisayarlara IP adreslerini ve buna ek olarak değişik parametreleri atamak için kullanılan servistir. DHCP’nin temel özelliği sistemi kuran kişilerin tek tek tüm makineleri gezip aynı veya benzer parametreleri defalarca eliyle girmesini engellemek, böylece zaman kazanmak ve sistem yöneticisinin işini kolaylaştırmaktır.</P>
+
+<h1><P class="p3 ft5">DHCP’nin avantajları</P></h1>
+
+<P class="p4 ft7"><SPAN class="ft6"><b>Disksiz iş istasyonları:</b> </SPAN>Aslında DHCP ilk olarak diske sahip olmayan bilgisayarlara IP bilgilerini sunmak için tasarlanmıştı. Bu tür iş istasyonları üzerinde herhangi bir yedekleme aracı olmadığı için açılış esnasında ağ IP verilerinin aktarılması gerekliydi. Açılış sırasında ilk olarak gereksinim duyulan veri ise, sizin de kolayca bulabileceğiniz gibi, basit bir IP’dir. Bu bilgi alındığı anda (Linux kullanılması durumunda) çekirdek disksiz makineye kolaylıkla transfer edilebilir.</P>
+
+<P class="p5 ft9"><SPAN class="ft8"><b>Ağda taşınabilir bilgisayarların varlığı:</b> </SPAN>Bir dizüstü bilgisayarı sıklıkla yanınızda gezdiriyorsanız, bu bilgisayarı her götürdüğünüz yerde ağ bilgilerini değiştirmenin ne kadar can sıkıcı olduğunu biliyorsunuzdur. DHCP’nin kullanıldığı ağlarda, otomatik olarak alınan bu bilgiler her yeni ağa bağlandığınız zaman güncellenir ve elle işlem yaparak zaman kaybetmeniz engellenir.</P>
+
+<P class="p6 ft11"><SPAN class="ft10"><b>DNS yönetiminin kolaylaşması:</b> </SPAN>DHCP sayesinde IP adreslerinin statik olarak tanımlanması engellenir. Sabit IP verilmesi halinde çok dikkat isteyen bu işlem, DHCP yardımıyla gereksiz hale gelir. On bilgisayarlı bir yere sistem kurduğumuzu düşünelim. Kullanıcılar hem kendi aralarında haberleşecekler, hem de internette gezip, <NOBR>e-posta</NOBR> alıp verecekler. Bunun için belli bir IP bloğu tanımlayıp, DHCP üzerinden bilgisayarlara dağıtacağız. İsterseniz şimdi bilgisayarlar için tanımlayacağımız parametreleri bir gözden geçirelim.</P>
+
+<P class="p3 ft12"><NOBR><b>1-</b>Her</NOBR> makinenin birbirinden farklı IP adresi olması gereklidir. Hiçbir IP birbiriyle çakışmamalıdır.</P>
+
+<P class="p7 ft13"><NOBR><b>2-</b>Her</NOBR> ethernet kartına ait belli bir ağ maskesi bulunmalı ve aynı alt ağ üzerinde bu ağ maskelerinin aynı olması gereklidir.</P>
+
+<P class="p8 ft9"><NOBR><b>3-</b>Eğer</NOBR> sistemin İnternete bağlantısı var ise İnternet’e bağlanacak olan bilgisayarların geçit(gateway) IP adresinin bulunması şarttır.</P>
+
+<P class="p9 ft7"><NOBR><b>4-</b>Son</NOBR> olarak en az bir, tercihen iki DNS IP adresinin de önceden belirlenmiş olması gereklidir. Yukarıdaki listeye bakarak geleneksel yöntemler ile (DHCP kullanılmadığı zaman) en az 4 değerin her bilgisayar için girilmesi gerektiğini de hemen söyleyebiliriz. Eğer 20 makinelik bir ağınız var ise, her bilgisayarı teker teker girip toplam 80 numarayı yazmak zorundasınız. Eğer benzeri bir işlemi daha geniş bir ağda (250 bilgisayar) yapmak isterseniz, gerisini siz düşünün.</P>
+
+<p><DIV id="page_2"></p>
+
+<h1><P class="p10 ft0">DHCP’nin Çalışma Prensipleri</P></h1>
+
+<P class="p11 ft13">DHCP sunucu bu gibi durumlarda imdadımıza koşan en büyük yardımcımız oluyor.Peki,açıldığı zaman IP adresi olmayan bir makine,nasıl oluyor da DHCP sunucudan bu bilgileri alıyor,saklıyor ve açılışta kullanabiliyor?</P>
+
+<h1><P class="p12 ft14">DHCP Discover</P></h1>
+
+<P class="p13 ft7">Bilgisayar ilk defa açıldığında öncelikle tüm ağa <SPAN class="ft6">DHCPDISCOVER </SPAN>mesajını yollar.Bu mesajın içeriği “Sistemde herhangi bir DHCP server bulunuyor mu?Eğer var ise bir IP adresi istiyorum” olarak özetlenebilir. Kuşkusuz ağa gönderilen DHCP istek paketini merak ediyorsunuzdur.İstekte bulunulan IP adresi,MAC adresi ya da paketi gönderen makinanın IP adresi bilinmediğinden,paketin içeriği aşağıdaki şekilde oluşacaktır:</P>
+
+<P class="p14 ft16"><NOBR><b>1-</b>Hedef</NOBR> IP adresi (Bilinmiyor): <SPAN class="ft15">255.255.255.255 (broadcast)</SPAN></P>
+
+<P class="p14 ft16"><NOBR><b>2-</b>Hedef</NOBR> MAC adresi(Bilinmiyor): <SPAN class="ft15">FF.FF.FF.FF.FF.FF.FF(broadcast)</SPAN></P>
+
+<P class="p15 ft16"><NOBR><b>3-</b>Kaynak</NOBR> IP Adresi(Bilinmiyor): <SPAN class="ft15">0.0.0.0</SPAN></P>
+
+<P class="p16 ft13"><NOBR><SPAN class="ft17"><b>4-</b>Kaynak</SPAN></NOBR><SPAN class="ft17"> MAC </SPAN><NOBR><SPAN class="ft17">Adresi:</SPAN>00-A0-CC-66-73-1F(Kendi</NOBR> kartımızın MAC adresini bilmek kadar doğal bir şey olamaz)</P>
+
+<h1><P class="p17 ft14">DHCP Offer</P></h1>
+
+<P class="p18 ft9">DHCP istemci tarafından sisteme atılan yayın paketi(broadcast packet) DHCP sunucu tarafından alınır.IP veritabanı sorgulanır,istemciye verilecek IP adresi ve kira süresi belirlenir. Sunucudan çıkan isteğin onaylanması için istemciye bu belirlenen bilgiler geri yollanır.</P>
+
+<P class="p19 ft13">Sistemde birden fazla DHCP sunucu bulunabilir. Bu durumda istemci ağa bir istek gönderdiği zaman en hızlı DHCP offer mesajı yollayanın IP bilgilerini benimseyecek ve bu tanımlarla ağa bağlanacaktır.</P>
+
+<P class="p20 ft16"><NOBR><b>1-</b>Hedef</NOBR> IP adresi (Henüz onaylanmadı): <SPAN class="ft15">0.0.0.0</SPAN></P>
+
+<P class="p15 ft16"><NOBR><b>2-</b>Hedef</NOBR> MAC adresi(Biliniyor,istemci <NOBR>makina):<SPAN class="ft15">00-A0-CC-66-73-1F</SPAN></NOBR></P>
+
+<P class="p14 ft16"><NOBR><b>3-</b>Kaynak</NOBR> IP Adresi(Biliniyor,DHCP sunucu): <SPAN class="ft15">10.0.0.1</SPAN></P>
+
+<P class="p15 ft16"><NOBR><b>4-</b>Kaynak</NOBR> MAC Adresi(Biliniyor,DHCP <NOBR>sunucum):<SPAN class="ft15">00-A0-C0-B6-12-6F</SPAN></NOBR></P>
+
+<h1><P class="p21 ft14">DHCP Request</P></h1>
+
+<P class="p22 ft15">DHCP OFFER mesajını alan DHCP istemci kendisine tahsis edilmiş IP adresini kiraladığına dair sunucuya bir yayın mesajı yollar,eğer DHCP istemci birden fazla DHCP OFFER mesajı almış ise ikinci bir broadcast mesajı daha yollar ve diğer DHCP sunuculara teşekkür edip artık bi IP adresine sahip olduğunu belirtir.</P>
+
+<p><DIV id="page_3"></p>
+
+<p><DIV id="id_1"></p>
+
+<h1><P class="p10 ft14">DHCP Acknowledgement</P></h1>
+
+<P class="p23 ft9">DHCP Request mesajını alana, DHCP server artık DHCP istemci için gerekli kayıtları gerçekleştirip ona gerekli olan IP,ağ maskesi,DNS adres veya adreslerini yollayacaktır .</P>
+
+<P class="p24 ft7">Gelelim kiralama olayına. Bazı programcılar,yarattıkları her şeye istatistikler doğrultusunda eklentiler yapmaya bayılıyorlar. Nitekim DHCP sunucuyu da yaratırken istemcilere verilecek IP adreslerinin kiralanması gerektiğini düşünmüşler ,aynen ev sahibi ve kiracılarda olduğu gibi. Belli parametreleri verdikten sonra geri kalan işin tamamını sunucu ile istemci kendi arasında halledecektir.</P>
+
+<h1><P class="p25 ft14">DHCP ile IP Adresi Verilmesi</P></h1>
+
+<P class="p26 ft11">Bir Linux makinesi bir DHCP sunucu veya DHCP istemci olarak çalışabilir. Linux’ta öntanımlı olarak gelen servisler arasından sadece DHCP’nin yapılandırma dosyaları yoktur ve elle yaratılmaları gerekmektedir. Üzerinde çalışacağımız iki önemli dosya vardır: <NOBR><SPAN class="ft18">-dhcp.conf:</SPAN></NOBR><SPAN class="ft18"> </SPAN>Tüm ayarlamalar bu dosya sayesinde gerçekleşir. <NOBR><SPAN class="ft18">-dhcpd.leases:</SPAN></NOBR><SPAN class="ft18"> </SPAN>Kiralanan IP adres verilerini tutmakla yükümlüdür. Bu dosyaları yaratmak için touch komutu kullanılabilir. <SPAN class="ft18">dhcpd.conf </SPAN>dosyası <b>/etc</b> dizininde,<SPAN class="ft18">dhcpd.leases </SPAN>ise <b>/var/lib/dhcp</b> dizinlerinin altında yaratılmalıdır.</P>
+
+<P class="p27 ft19"><code><b>cd /etc</b> </code><br><code><b>pwd</b></code> <br><code><b>/etc</b></code></P>
+
+<P class="p28 ft20"><code><b>touch dhcpd.conf</b></code><br></code><br><code> <b>cd /var/lib/dhcp</b></code><br><code> <b>pwd</b></code><br><code> <b>/var/lib/dhcp</b></code> <br><code><b>touch dhcpd.leases</b></code></P>
+
+<P class="p29 ft21">Burada dikkat edeceğimiz nokta, <b>dhcpd.leases</b> dosyasının hiçbir zaman elle düzenlenmemesi gerektiğidir. Şimdi aşağıdaki satırları teker teker <SPAN class="ft18"><b>/etc/dhcpd.conf</b> </SPAN>dosyasına girin. Söz konusu satırlarla ilgili açıklamalar her satırın altında bulunmaktadır. Yapılandırma dosyası içinde okunurluğu artırmak için sekme ve boşluk karakteri kullanılabilir.</P>
+
+<P class="p30 ft22"><NOBR><code><b>ddns-update-style interim;</b></code></P>
+
+<P class="p31 ft22"><NOBR><code><b>default-lease-time 600;</b></code></P>
+
+<P class="p32 ft13"><NOBR><b>default-lease-time</b></NOBR> parametresi , DHCP istemcilere verilecek IP adreslerinin kira süresi belirtir. Bu değer saniye cinsindendir,örnekte 10 dakikalık kiralama süresi verilmiştir. Bu süre aslına bakarsanız oldukça kısa ve sistemde gereksiz trafik yaratabilir.Dilerseniz bu işlem için bu süredaha fazla olabilir.(Örneğin 3 veya 5 günlük gibi).</P>
+
+<P class="p33 ft22"><NOBR><code><b>max-lease-time</NOBR> 7200;</b></code></P>
+
+<p><DIV id="id_2">
+<P class="p34 ft13"><NOBR><SPAN class="ft18"><b>default-lease-time</b></SPAN></NOBR><SPAN class="ft18"> </SPAN>değerindeki süre dahilinde kira yenilenmemiş ise DHCP istemciye <NOBR><SPAN class="ft18"><b>max-lease-</SPAN></NOBR><SPAN class="ft18"> time </b></SPAN>değeri boyunce süre tanınır. Eğer yenilenmezse ne olur derseniz,basit:Kendinizi kapı önünde bulursunuz.</P></p>
+
+<p><DIV id="page_4"></p>
+
+<p><DIV id="id_1">
+<P class="p10 ft22"><code><b>option subnet-mask 255.255.255.0;</b></code></P>
+<P class="p21 ft23">DHCP istemcilerin dahil olacağı alt ağ maskesi(subnet) belirtilir.</P>
+<P class="p35 ft22"><code><b>option broadcast-address 192.168.1.255;</b></code></P>
+<P class="p20 ft12">DHCP istemcilere dahil oldukları ağın yayın(broadcast) adresini verir.</P>
+<P class="p36 ft22"><code><b>option routers 192.168.1.254;</b></code></P>
+<P class="p37 ft13">Eğer sistemde bir gateway(geçit) veya router(yönlendirici) var ise DHCP istemcilere bunların IP adresleri belirtilir.</P>
+<P class="p38 ft22"><code><b>option netbios-name-servers 192.168.1.1,192.168.1.2;</b></code></P>
+<P class="p39 ft13">Eğer sistemde bir veya birden fazla WINS server var ise DHCP istemcilere bunların IP adresleri belirtilir.</P>
+<P class="p38 ft22"><code><b>option domain-name-servers 192.168.1.1,192.168.1.2;</b></code></P>
+<P class="p40 ft9">DHCP istemcilerin kullanması gereken DNS sunucuların IP adresleri <NOBR>domain-name-servers</NOBR> ile belirtilir.Eğer birden fazla IP adresi verilecekse aralarında virgül bulunmalıdır.</P>
+<P class="p41 ft22"><code><b>option domain-name “tegsoft.com”</b></code> ;</P>
+<P class="p42 ft12">DHCP istemcilerin bulunacağı,dahil olacağı etki alanı belirtilir.</P>
+<P class="p43 ft22"><code><b>subnet 192.168.1.0 netmask 255.255.255.0 {</b></code></P>
+<P class="p44 ft13">DHCP sunucunun hangi IP ağı üzerinden IP adresi dağıtacağı belirtilir.Subnet paramatresinin bulunduğu satırın sonunda ,bu IP adresine ait olan diğer parametrelerin belirtilmesi amacıyla parantez açılmıştır.Parantez kapatılana kadar söz konusu IP adresi için DHCP sunucunun diğer parametreleri tanımlanır.</P>
+<P class="p43 ft22"><code><b>range 192.168.1.10 192.168.1.100;</b></code>&gt;</P></p>
+
+<p><DIV id="id_2">
+<P class="p10 ft12">DHCP sunucunun hangi IP adresi aralığında IP dağıtacağı belirtilir.</P></p>
+
+<p><DIV id="page_5"></p>
+
+<P class="p10 ft22"><code><b>}</b></code></P>
+
+<P class="p45 ft7">Yukarıda parantezi kapattık. DHCP kullandığınız bir sistemde,bazı durumlarda ağda öyle makineler bulunabilir ki bunlara her zaman aynı IP adresleri verilmelidir.Örnek olarak sistemdeki DNS sunucu,web sunucu,veritabanı sunucu için kullanılan makinelerin IP adreslerinin değişmesi halinde her şey karmakarışık olabilir.Zira bu sunucuların kullandığı IP adresleri yanlışlıkla DHCP sunucu ile başka makineler için tanımlanabilir.</P>
+
+<h1><P class="p20 ft24">Bir Makineye Sabit IP Verilmesi</P></h1>
+
+<P class="p46 ft13">Ağda öyle makineler vardır ki bunların mutlaka her zaman aynı IP adresine ihtiyaçları olur. Örneğin sistemde DNS sunucu, web sunucu, veritabanı sunucu, hatta başka bir DHCP sunucu varsa bu gibi durumlarda seçebileceğimiz iki seçenek var. Birincisi; bu tip işlevleri olan makinelere IP adreslerini statik girmek,diğeri de aşağıdaki gibi bir yol izlemek.</P>
+
+<P class="p47 ft25"><code><b>host tegsoft{</P>
+
+<P class="p10 ft25">hardware ethernet 08:00:2b:4c:59:23 ;</P>
+
+<P class="p10 ft25"># 08:00:2b:4c:59:23</P>
+
+<P class="p10 ft25"><NOBR>Fixed-address</NOBR> 192.168.1.222;</P>
+
+<P class="p48 ft22">}</P></b></code>
+<P class="p49 ft15">Yukarıda verdiğiniz IP,dağıttığınız IP aralığı içinde olsa dahi normal bir bilgisayara kesinlikle verilmez,belirtilen MAC adresine sahip ethernet kartının bulunduğu makine için ayrılır.Yukarıda host ile başlayan satırın hemen sonundaki tegsoft ismi makinanın tam adını karşılamayabilir.Önemli olan ethernet MAC adresinin tutmasıdır.Peki bu MAC adresini nasıl bulacaksınız?Linux altında <b>"ifconfig"</b> komutu bize ethernet kartı bilgilerinin yanında MAC adresini de veriyordu. DHCP sunucuyu çalıştırmak için isterseniz <SPAN class="ft18"><b>/etc/init.d</b> </SPAN>dizinine geçip <SPAN class="ft18"><b>./dhcpd start </b></SPAN>komutunu verebilir, veya herhangi bir dizindeyken aşağıdaki satırı uygulayabilirsiniz.</P>
+
+<P class="p20 ft22"><code><b>service dhcpd start</b></code></P>
+
+<P class="p50 ft13">Unutmadan,her açılışta DHCP sunucunun çalışmasını istiyorsanız <b>ntsysv</b> komutunu çalıştırıp DHCP kutucuğunu işaretlemeniz yeterli olacaktır.Ya da <SPAN class="ft18"><b>/etc/init.d</b> </SPAN>dizinindeki <SPAN class="ft18"><b>rc.local</b> </SPAN>dosyası sonuna <SPAN class="ft18"><b>/etc/init.d/dhcpd</b> </SPAN>start satırını ekleyerek de bu işlem gerçekleştirilebilir.İlk yöntem standart yöntemlerin dışına çıkılmaması açısından daha uygundur.</P>
+
+<h1><P class="p20 ft26">Birden Fazla Ethernet Kartı İle Çalışmak</P></h1>
+
+<P class="p51 ft7">DHCP kurulu bir Linux sistemde , eğer birden fazla ethernet kartı varsa, sadece tek bir ethernet kartının IP dağıtımı yapmasını istediğiniz durumlar olabilir.özellikle aynı makinede birden fazla sevis çalıştıran firmalarda tek Linux sunucuya squid proxy,güvenlik <NOBR>duvarı,e-posta</NOBR> sunucusu,DHCP sunucusu vb. aktarıldığı zaman bu durum ortaya çıkar.Zira genellikle çalışan iki ethernet kartı vardır,ancak sadece birisinin etkin olması istenir. Bu durumda işimizi kolaylaştıran bir parametre bizim için Dhcpd programına <b>eth0</b> parametresini eklerseniz sadece eth0 üzerinden gelen istekler dinlenecektir. Benzer şekilde <SPAN class="ft18"><b>eth0</b> </SPAN>yerine <SPAN class="ft18"><b>eth1</b> </SPAN>yazmanız durumunda dinlenecek ethernet kartı <SPAN class="ft18"><b>eth1</b> </SPAN>olacaktır. Öyleyse dhcp programını çalıştıran <SPAN class="ft18"><b>/etc</b> </SPAN>başlangıç betiklerini değiştirmemiz gereklidir. <SPAN class="ft18"><b>/etc/init.d/dhcp</b> </SPAN>dosyasının bir kısmını inceleyelim:</P>
+
+<p><DIV id="page_6"></p>
+
+<P class="p10 ft23"><code><b>start()</P>
+
+<P class="p42 ft27">{</P>
+
+<P class="p52 ft27">echo <NOBR>–n</NOBR> $”Starting dhcpd: ” daemon /usr/sbin/dhcpd RETVAL=$?</P>
+
+<P class="p53 ft27">echo</P>
+
+<P class="p54 ft27">[ $RETVAL <NOBR>-eq</NOBR> 0 ] && touch /var/lock/subsys/dhcpd return $RETVAL</P>
+
+<P class="p48 ft23">}</b></code></P>
+
+<P class="p55 ft18"><SPAN class="ft13">Yapılması gereken işlem, “ </SPAN><b>daemon /usr/sbin/dhcpd”</b> <SPAN class="ft13">satırını “ </SPAN><b>daemon /usr/dhcpd eth0” </b><SPAN class="ft13">olarak değiştirmek.DHCP servisinin yeniden başlatmanız halinde artık sadece </SPAN><b>eth0</b> <SPAN class="ft13">üzerinden gelen istekler cevaplanacaktır.</SPAN></P>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/networking/">Networking</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

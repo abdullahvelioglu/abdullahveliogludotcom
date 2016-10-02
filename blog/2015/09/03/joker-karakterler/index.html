@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="Linux işletim sistemi, yazdığınız komutları daha kısa ve işlevsel hale getiren joker karakterleri(wildcards) destekle..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>LINUX_WILDCARDS(JOKER_KARAKTERLER) &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-03">03 September 2015</time>
+  <h2>LINUX_WILDCARDS(JOKER_KARAKTERLER)</h2>
+  
+
+
+  <p>
+Linux işletim sistemi, yazdığınız komutları daha kısa ve işlevsel hale getiren joker karakterleri(wildcards) desteklemektedir.
+<b>Wildcard</b>&#39; lar, size, nispeten daha kompleks işlemler yaparken, kolaylık sağlar. Örnek olarak bir dizin altında bulunan .cfg uzantılı dosyaları
+başka bir dizine kopyalamak istediğimizi düşünelim. Bunun için normal şartlar altında, ya bir görsel arayüz programı kullanarak, ya da tüm dosyaları tek tek
+kopyala komutu kullanarak, kaynak dosyaları başka bir dizine yerleştirebiliriz. Ancak wildcards&#39; lar sayesinde aşağıdaki gibi, çok daha kısa bir söz dizimi ile bu işlemi kolaylıkla gerçekleştirebiliriz.
+</p>
+
+<p><pre>
+cp ~/workspace/*.cfg ~/workspace2
+</pre><br/></p>
+
+<p>
+Linux, <i>globbing</i> olarak da anılan, bir çok joker karakter tanımlamıştır. Bunların her biri aşağıdaki tabloda açıklanmaktadır.
+</p>
+
+<h3>Joker Karakterler(Wildcards)</h3>
+
+<table style="border: 1px #ddd solid; padding-left:3em;">
+<th>Wildcard, Joker Karakter</th>
+<th style="padding-left:2em;">Anlamı</th>
+<tr>
+<td>*</td><td style="padding-left:4em;">Bütün karakterler, çoğul seçim</td>
+</tr>
+
+<tr>
+<td>?</td><td style="padding-left:4em;">Herhangi bir karakter, tekil seçim</td>
+</tr>
+
+<tr>
+<td>[karakterler]</td><td style="padding-left:4em;">Karakter kümesi, veya operatörü ile çalışır.</td>
+</tr>
+
+<tr>
+<td>[!karakterler]</td><td style="padding-left:4em;">Karakter kümesi haricinde demektir.</td>
+</tr>
+
+<tr>
+<td>[[:sınıf:]]</td><td style="padding-left:4em;">Belirtilen bir karakter sınıfına ait olan eşleşme. Karakter sınıfları bir sonraki tabloda anlatılmaktadır.</td>
+</tr>
+</table><br/>
+
+<h3>Karakter Sınıfları(Character Classes)</h3>
+<table style="border: 1px #ddd solid; padding-left:3em;">
+<th>Karakter sınıfı</th>
+<th style="padding-left:2em;">Anlamı</th>
+<tr>
+<td>[:alnum:]</td><td style="padding-left:4em;">Herhangi bir alfanumerik karakter</td>
+</tr>
+
+<tr>
+<td>[:alpha:]</td><td style="padding-left:4em;">Herhangi bir alfabetik karakter</td>
+</tr>
+
+<tr>
+<td>[:digit:]</td><td style="padding-left:4em;">Herhangi bir rakam</td>
+</tr>
+
+<tr>
+<td>[:lower:]</td><td style="padding-left:4em;">Herhangi bir küçük harfli karakter</td>
+</tr>
+
+<tr>
+<td>[:upper:]</td><td style="padding-left:4em;">Herhangi bir büyük harfli karakter</td>
+</tr>
+</table>
+
+<h3>Örnekler</h3>
+
+<p><pre>
+*.cfg -&gt; Sonu .cfg ile biten dosyalar</p>
+
+<p>A*.cfg -&gt; A ile başlayan Sonu .cfg ile biten dosyalar</p>
+
+<p>???.txt-&gt; 3 harfli olup sonu .txt ile biten dosyalar</p>
+
+<p>[abc]* -&gt; a, b ya da c ile başlayan dosyalar</p>
+
+<p>Version.[:digit:] [:digit:] -&gt; Version.<i>rakam rakam</i> formatındaki dosyalar</p>
+
+<p>*[[:upper:]] -&gt; Sonu buyuk harfli biten dosyalar</p>
+
+<p>*[[:lower:]012] -&gt; Sonu küçük harfli biten veya 0, 1 ya da 2 ile biten dosyalar</p>
+
+<p>[![:digit:]]* -&gt; Başı rakamla başlamayan dosyalar</p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/linux/">Linux</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="TCP/IP ve DoD ModeliTCP/IP protokol kümesi Department of Defense (DoD) tarafından geliştirilmiştir. DoD modeli daha ö..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>TCP-IP Ve Subnetting İşlemi &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2016-07-28">28 July 2016</time>
+  <h2>TCP-IP Ve Subnetting İşlemi</h2>
+  
+
+
+  <h2><P class="p2 ft2">TCP/IP ve DoD Modeli</P></h2>
+
+<P class="p3 ft3">TCP/IP protokol kümesi Department of Defense (DoD) tarafından geliştirilmiştir. DoD modeli daha önce açıkladığımız OSI modelinin özetlenmiş hali gibi düşünülebilir. Bu modelde 4 katman mevcuttur. Bu katmanlar şunlardır;</P>
+
+<P class="p4 ft2"><SPAN class="ft4"><b>–</SPAN><SPAN class="ft5">Process/Application katmanı</b></SPAN></P>
+
+<P class="p5 ft2"><SPAN class="ft4"><b>–</SPAN><NOBR><SPAN class="ft5">Host-to-Host</SPAN></NOBR> katmanı</b></P>
+
+<P class="p6 ft2"><SPAN class="ft4"><b>–</SPAN><SPAN class="ft5">Internet katmanı</b></SPAN></P>
+
+<P class="p5 ft2"><SPAN class="ft4"><b>–</SPAN><SPAN class="ft5">Netword Access katmanı</b></SPAN></P>
+
+<P class="p7 ft6">Bu modelle OSI modelini karşılaştırırsak, bu modeldeki hangi katmanın OSI modelindeki hangi katmana denk düştüğünü aşağıdaki şekilden görebilirsiniz.</P>
+
+<p><IMG src="http://www.abdullahvelioglu.com/blog/public/images/1x1.jpg" id="p3img1">
+<P class="p8 ft4">Şimdi de DoD modelinde her bir katmanda tanımlı olan protokolleri inceleyelim.</P></p>
+
+<h1><P class="p0 ft2">a ) Process/Application Katmanı Protokolleri</P></h1>
+
+<P class="p9 ft3"><SPAN class="ft7"><b>Telnet </SPAN>:</b> Telnet bir terminal emülasyon protokolüdür. Bu protokol, kullanıcıların telmet istemci programlarını kullanarak Telnet sunuculara bağlanmalarını sağlar. Böylece telnet sunucuları uzaktan yönetilebilir.</P>
+
+<P class="p10 ft4"><SPAN class="ft2"><b>FTP (File Transfer Protocol) </SPAN>:</b> İki bilgisayar arasında dosya alıp vermeyi sağlayan bir protokoldür.</P>
+
+<P class="p11 ft3"><SPAN class="ft7"><b>TFTP (Trivial File Transfer Protocol) </SPAN>:</b> Ftp protokolünün bazı özellikleri çıkartılmış halidir. Mesela bu protokolde FTP protokolünde bulunan <NOBR>klasör-gözatma</NOBR> <NOBR>(directory-browsing)</NOBR> ve kullanıcı doğrulama (authentication) yoktur. Genellikle küçük boyutlu dosyaların lokal ağlarda aktarılması için kullanılır.</P>
+
+<P class="p12 ft3"><SPAN class="ft7"><b>NFS (Network File System) </SPAN>:</b> Bu protokol farklı tipte iki dosya sisteminin bir arada çalışmasını sağlar.</P>
+
+<P class="p13 ft9"><SPAN class="ft8"><b>SMTP (Simple Mail Transfer Protocol) </SPAN>:</b> Bu protokol mail göndermek için kullanılır.</P>
+
+<P class="p14 ft4"><SPAN class="ft2"><b>LPD (Line Printer Deamon) </SPAN>:</b> Bu protokol yazıcı paylaşımını gerçekleştirmek için kullanılır.</P>
+
+<P class="p15 ft11"><SPAN class="ft10"><b>XWindow </SPAN>:</b> Grakfiksel kullanıcı arayüzü tabanlı istemci sunucu uygulamaları geliştirmek için tanımlanmış bir protokoldür.</P>
+
+<P class="p16 ft3"><SPAN class="ft7"><b>SNMP (Simple Network Management Protocol) </SPAN>:</b> Bu protokol network cihazlarının göndermiş olduğu bilgileri toplar ve bu bilgileri işler. Bu özelliğe sahip cihazlar SNMP yönetim programları kullanılarak uzaktan izlenip yönetilebilir.</P>
+
+<P class="p17 ft11"><SPAN class="ft10"><b>DNS (Domain Name Service) </SPAN>:</b> Bu protokol internet isimlerinin (örneğin <A href="http://www.tegsoft.com/"><SPAN class="ft12">www.tegsoft.com</SPAN></A> gibi) IP adreslerine dönüştürülmesini sağlar.</P>
+
+<P class="p18 ft14"><SPAN class="ft13"><b>BootP (Bootstrap Protocol) </SPAN>:</b> Bu protokol disket sürücüsü olmayan bilgisayarların IP adres almalarını sağlar. Şöyleki network’e bağlı disket sürücüsüz bir bilgisayar ilk açıldığında ağa bir BootP istediğini broadcast yapar. Ağdaki BootP sunucu bu isteği duyar ve gönderenin MAC adresini kendi tabanında arar. Eğer veritabanında bu istemci için bir kayıt bulursa bu istemciye bir IP adresini TFTP protokolünü kullanarak yollar. Ayrıca yine TFTP protokolünü kullanarak istemciye boot edebilmesi için gereken dosyayı yollar.</P>
+
+<P class="p19 ft3"><SPAN class="ft7"><b>DHCP (Dynamic Host Configuration Protocol) </SPAN>:</b> Bu protokol ağ üzerindeki istemcilere dinamik olarak IP adresi dağıtma işlemini yapar. Istemcilere IP adresinin yanısıra alt ağ maskesi (subnet mask), DNS sunucusunun IP adresi, ağ geçici adresi, WINS sunucunun adresi gibi bilgilerde dağıtılabilir.</P>
+
+<p><IMG src="http://www.abdullahvelioglu.com/blog/public/images/3x1.jpg" id="p3img1"></p>
+
+<h1><P class="p0 ft2">b ) <NOBR>Host-to-Host</NOBR> Katmanı Protokolleri</P></h1>
+
+<P class="p20 ft14"><SPAN class="ft13"><b>TCP (Transmission Control Protocol) </SPAN>:</b> TCP protokolü uygulamalardan aldığı verileri daha küçük parçalara (segment) bölerek ağ üzerinden iletilmesini sağlar. Iki cihaz arasında TCP iletişimi başlamadan önce bir oturumun kurulması gerekir. Yani TCP <NOBR>connection-oriented</NOBR> türünde bir protokoldür. Bunun yanında TCP <NOBR>full-duplex</NOBR> ve güvenilir bir protokoldür. Yani gönderilen datanın ulaşıp ulaşmadığını, ulaştıysa doğru iletilip iletilmediğini kontrol eder. Bir TCP segmentinin formatı ise aşağıdaki şekildedir.</P>
+
+<P class="p21 ft4">TCP başlığı 20 byte uzunluğundadır. Şimdi bu başlıktaki alanları teker teker inceleyelim. Kaynak port kısmında paketin ait olduğu uygulamanın kullanıldığı portun numarası bulunur. Hedef port kısmında ise alıcı uygulamanın port numarası bulunur. Sıra numarası kısmındaki sayı TCP’nin parçalara verdiği sayı numarasıdır. Paketler bu numaraya göre karşı tarafa gönderilir ve karşı tarafta paketleri bu sırayla birleştirir. ACK kısmındaki sayı ise TCP’nin özelliği olan güvenilirliğin bir sonucudur ve karşı tarafın gönderen tarafa hangi sıra numarasına sahip paketi yollaması gerektiğini belirtir. Yani karşı taraf birinci paketi aldığında gönderen tarafa ACK’sı 2 olan bir paket yollar. HLEN ise başlık uzunluğunu ifade eder. Saklı alanındaki bitler ise daha sonra kullanılmak üzere saklı bırakılmışlardır ve hepsi 0’dır. Kod bitleri kısmındaki değer ise bağlantının kurulması ve sonlandırılmasını sağlayan fonksiyonlar tarafından kullanılır. Pencere kısmındaki değer ise karşı tarafın kabul edeceği pencere boyutunu ifade eder. Checksum kısmındali değer CRC değeridir ve TCP tarafından hesaplanır. <NOBR>İvedi-durum</NOBR> işaretçisi eğer paketin içinde öncelikle değerlendirilmesi gereken bir veri varsa onun paket içindeki başlangıç noktasını işaret eder.</P>
+
+<P class="p22 ft16"><SPAN class="ft15"><b>UDP (User Datagram Protocol) </SPAN>:</b> Bu protokol TCP’nin aksine connectionless ve güvensiz bir iletişim sunar. Yani iletime başlamadan önce iki uç sistem arasında herhangi bir oturum kurulmaz. Ayrıca UDP’de gönderilen verinin yerine ulaşıp ulaşmadığı kontrol edilmez. Buna karşılık UDP TCP’den daha hızlıdır. Aşağıda bir UDP segmentinin formatı gösterilmiştir. Buradaki alanların işlevleri TCP segmentindeki alanlarla aynıdır.</P>
+
+<h1><P class="p23 ft2">c) Internet Katmanı Protokolleri</P></h1>
+
+<P class="p24 ft6"><SPAN class="ft17"><b>IP (Internet Protocol) </SPAN>:</b> IP protokolü internet katmanının temel protokolüdür. Bu katmanda tanımlı olan diğer protokoller IP protokolünün üzerine inşa edilmişlerdir. Bu protokolde ağ üzerindeki her bir cihaza bir IP adresi tanımlanır. Bu katmanda çalışan ağ cihazları (örneğin router) kendisine gelen paketlerdeki IP adres kısmına bakarak bu paketin hangi ağa yönlendirilmesi gerektiğine kara verir.</P>
+
+<P class="p25 ft6"><SPAN class="ft17"><b>ICMP (Internet Control Message Protocol) </SPAN>:</b> Bu protokol IP tarafından değişik servisler için kullanılır. ICMP bir yönetim protokolüdür ve IP için mesaj servisi sağlar. Bu protokolü kullanan servislere örnek olarak ping, traceroute verilebilir.</P>
+
+<P class="p26 ft11"><SPAN class="ft10"><b>ARP (Address Resolution Protocol) </SPAN>:</b> Bu protokol ağ üzerinde IP adresi bilinen bir cihazın MAC adresinibulmak için kullanılır.</P>
+
+<P class="p27 ft11"><SPAN class="ft10"><b>RARP (Reverse Address Resolution Protocol) </SPAN>:</b> Bu protocol ise ARP’nin tam tersini yapar. Yani MAC adresi bilinen bir cihazın IP adresini öğrenmek için kullanılır.</P>
+
+<P class="p28 ft16">IP adresi sayısal bir değer olup IP ağlardaki her bir cihazın sahip olması gerekir. IP adresleri MAC adreslerinin tersine donanımsal bir adres değil sadece yazılımsal bir değerdir. Yani istenildiği zaman değiştirilebilir. IP adresleri iki kısımdan oluşur. Birinci kısım Network ID olarak bilinir ve cihazın ait olduğu ağı belirtir. İkinci kısım ise Host ID olarak adlandırılır ve IP ağındaki cihazın adresini belirtir. Her bir cihaz için IP adresi tüm ağda tek olmalıdır.</P>
+
+<h1><P class="p29 ft2">IP Adresleri</P></h1>
+
+<P class="p30 ft14">IP adresleri 32 bit uzunluğundadır ve birbirinden nokta ile ayrılmış dört oktetden oluşur. Bu sayılar 0 ile 255 arasında bir değer olabilir. Örnek bir IP adresi 192.168.47.90’dır. Peki network’teki cihaz hangi ağa sahip olduğunu nasıl anlar? Bunu anlamak için subnet mask (alt ağ maskesi) denilen değeri kullanır. IP adresi ile subnet mask değerini lojik AND işlemine tabii tutarak kendi Network ID’sini bulur. Her bir IP adres sınıfı için bu subnet mask değeri farklıdır. Burada yeni bir kavram karşımıza çıktı. IP Adres Sınıfları. Şimdi bu IP adres sınıflarını inceleyelim.</P>
+
+<P class="p31 ft19"><b>1) <SPAN class="ft18">A Sınıfı Adresler</SPAN>:</b> IP adresindeki ilk oktet 0 ile 127 arasındadır ve varsayılan subnet mask ise 255.0.0.0 ‘dır. A sınıfı IP adreslerinde ilk oktet network ID’yi diğer üç oktet ise host ID’yi gösterir. Burada ilk oktet’in 0 ve 127 olma durumları özel durumlardır ve network’te kullanılmazlar. Örneğin 127.0.0.1 yerel loopback adresidir. Dolayısıyla A sınıfı IP adresi kullanılabilecek ağ sayısı 126’dır.</P>
+
+<P class="p32 ft6">A sınıfı IP adresine sahip bir ağda tanımlanabilecek host sayısı ise şu formülle hesaplanır; 2<SPAN class="ft20">24 </SPAN>– 2 . Bu işlemin sonucu olarakta 16.777.214 adet host olabilir. Peki burada kullandığımız 24 nereden geldi? A sınıfı adreste host’u tanımlamak için son üç oktet (sekizli) kullanılıyordu. Yani toplam 24 bit’i host tanımlamak için kullanabiliyoruz. Bu bitler ya 0 ya da 1 olmak zorunda. Bu yüzden</P>
+
+<P class="p33 ft6">birbirinden farklı kaç kombinasyon olacağını 2<SPAN class="ft20">24 </SPAN>ile bulabiliriz. Bu sayıdan 2 çıkarmamızın nedeni ise bu 24 bit’in hepsinin 0 veya 1 olmasının özel bir anlamı olduğu ve herhangi bir host’a IP adresi olarak verilemediği içindir. Örnek bir A sınıfı IP adresi 49.19.22.156 olarak verilebilir. Burada 49 bu IP adresinin ait olduğu ağın ID’sini 19.22.56 ise bu IP adresine sahip host’un host ID’sini gösterir.</P>
+
+<P class="p34 ft16"><SPAN class="ft16"><b>2)</SPAN><SPAN class="ft21">B Sınıfı Adresler</SPAN>:</b> IP adresindeki ilk oktet 128 ile 191 arasındadır ve kullanılan subnet mask ise 255.255.0.0 ‘dır. Bu da demektir ki bu tür bir IP adresinde ilk iki oklet Network ID’sini, diğer iki oklet ise Host ID’yi gösterir. B sınıfı IP adresinin kullanılabileceği ağ sayısı 16.384 ve her bir ağda kullanılabilecek host sayısı ise 65.534’dür. Örnek bir B sınıfı IP adresi 160.75.10.110 olarak verilebilir.</P>
+
+<P class="p35 ft3"><SPAN class="ft3"><b>3)</SPAN><SPAN class="ft22">C Sınıfı Adresler</SPAN>:</b> IP adresindeki ilk oktet’in değeri 192 ile 223 arasında olabilir ve varsayılan subnet mask değeri ise 255.255.255.0 ‘dır. Yani bu tür bir IP adresinde ilk üç oktet Network ID’yi son oktet ise Host ID’yi belirtir. Örneğin 192.168.47.90 IP adresini inceleyelim. Bu IP adresi C sınıfı bir IP adresidir. Bunu ilk oktetin değerine bakarak anladık. Bu IP adresinin ait olduğu ağın ID’si ise 192.168.47’dur. Bu IP adresine sahip cihazın host numarası ise 90’dir. C sınıfı IP adreslerinin kullanılabileceği ağ sayısı 2.097.152 ve bu ağların herbirinde tanımlanabilecek host sayısı ise 254’dür.</P>
+
+<P class="p36 ft11">Bu üç IP sınıfının haricinde D ve E sınıfı IP adresleride mevcuttur. D sınıfı IP adresleri multicast yayınlar için kullanılır. E sınıfı adresler ise bilimsel çalışmalar için saklı tutulmuştur.</P>
+
+<h1><P class="p37 ft23">Subnetting</P></h1>
+
+<P class="p38 ft14">Subnetting kavramı nedir? <br>Bu sorunun cevabını şöyle verelim. Farzedelim ki elimizde bir tane ağ adresiniz var fakat trafik olarak birbirinden bağımsız 4 tane ağ kurmak istiyorsunuz. Mesela şirketinizde bulunan muhasebe departmanı ile satış departmanlarının ağlarının birbirini etkilememesini istiyorsunuz ve elinizde bir tane ağ adresi var. Bu gibi durumlarda subnetting yani alt ağlara bölme işlemi yapılır. Bunun için IP adresindeki host’lar için ayrılmış kısımdaki bitlerden ihtiyaç olduğu kadarını subnet yapmak için alırız. Bu bitleri alırken gözönünde bulundurmamız gereken birkaç önemli nokta var. Bu noktalardan birincisi; kaç tane alt ağa ihtiyacımızın olacağını belirlememiz ayrıca her bir alt ağda kaç tane host bulunacağınıda gözönünde bulundurmamız gerekiyor. Alt ağ sayısını hesaplarken bu alt ağlar arasındaki bağlantılarıda bir alt ağ olarak hesaba katmalıyız. Host sayısını hesaplarken ise bu alt ağlar arası bağlantının sağlandığı arayüzleri de ayrı birer host gibi düşünüp hesaba katmalıyız.</P>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/networking/">Networking</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="Nesneye yönelik programlamanın felsefelerinden birisi olan miras(inheritance) kavramı ortaya atıldığında programlama ..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>MIRAS(INHERITANCE) &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-09">09 September 2015</time>
+  <h2>MIRAS(INHERITANCE)</h2>
+  
+
+
+  <p>Nesneye yönelik programlamanın felsefelerinden birisi olan miras(inheritance) kavramı ortaya atıldığında programlama dünyasında çok önemli bir etkiye sahip olmuştur.Şöyleki,bir sınıf bir üst sınıf tarafından türetilirse veya başka bir tabir ile genişletilirse o sınıfı devralmış olur.
+<br/><br/>
+Bir sınıfın örnekleri,ata sınıfın örneklerini devralarak,ilgili nesneye kendine özgü yeni özelliklerini ilave ederek yeniden ortaya çıkmasına nesne yönelimli programlama da <b>miras</b> denmektedir.Bir programda yazılan bir sınıfın,bir başka sınıftan türetilmesi gerektiğine karar vermede öngörülen en önemli yapıt hiyerarşi sistemidir.Türetilen bir sınıf,ancak o sınıfın mantıksal ilişkisi olan daha genel bir sınıf tarafından türetilmesi gerekmektedir.Bu yüzden ataerkil hiyerarşisini,tasarlanacak model üzerinde iyi kurgulayıp miras işlemi gerçeklemek gerekir.
+<br/><br/>
+Hayvanları çeşitli özelliklerine göre ayırmak istersek aşağıdaki gibi bir yapı kurgulamak konunun anlaşılması açısından yerinde olacaktır.
+<center>
+<img src="/Content/Software/231oop.png" alt="Miras-1" />
+</center>
+Yukarıdaki hiyerarşik yapıya bakıldığı zaman en ilkel sınıf <b>Hayvan</b> olacaktır.Çünkü <b>memeli</b> ve <b>sürüngen</b>lerde birer hayvandır.Ancak bir hayvanın fiziki özelliklerine göre ayrılmış bir hayvan. <b>Kedi</b> ve <b>Köpek</b> sınıfları da,<b>memeli</b> sınıfının birer örnekleridir.<br/><br/>
+Miras kavramını incelemeye başka bir hiyerarşik yapı ile devam edelim.
+<center>
+<img src="/Content/Software/0023oop.png" alt="Miras-2" />
+</center>
+Bu hiyerarşik yapıya bakıldığında,<b>Hayvan</b> sınıfının da bir üst sınıfı olduğunu,bu sınıfında <b>Omurgalı</b> sınıf olduğu görülmektedir.<br/><br/>
+Dolayısıyla nesneye yönelik programlama dünyasında bir sınıfı atasından türetmek için aradaki mantıksal ilişkiyi göz önünde bulundurmak gerekmektedir.Yukarıdaki diyagramların her birinde kuşkusuz en üst sınıf <b>Canlı</b> sınıfı olacaktır.<br/><br/></p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;4&quot; rules=&quot;rows&quot; border=&quot;1&quot; id=&quot;ctl00_Govde_Grid_yorumlar&quot; style=&quot;color:Black;background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;height:60px;width:900px;border-collapse:collapse;&quot;&gt;
+    &lt;tr style=&quot;color:White;background-color:#333333;font-weight:bold;&quot;&gt;
+        &lt;th scope=&quot;col&quot;&gt;Üye&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Yorum&lt;/th&gt;&lt;th align=&quot;left&quot; valign=&quot;top&quot; scope=&quot;col&quot;&gt;Tarih:&lt;/th&gt;
+    &lt;/tr&gt;&lt;tr&gt;
+        &lt;td align=&quot;left&quot; valign=&quot;top&quot; style=&quot;width:100px;&quot;&gt;
+        &lt;span id=&quot;ctl00_Govde_Grid_yorumlar_ctl02_lbl_kullanici_adi&quot;&gt;Abdullah Velioğlu&lt;/span&gt;
+        &lt;/td&gt;&lt;td&gt;
+        &lt;span id=&quot;ctl00_Govde_Grid_yorumlar_ctl02_lbl_yorum&quot;&gt;&lt;pre&gt;Soruda belirtilen Otomobil, Otobus, Traktor, Motosiklet ve Cifti kavramları bir sınıf olarak tasarlanmalıdır.
+</code></pre></figure>
+<p>Otomobil, Otobus, Traktor ve Motosiklet sınıfları ortak bir Arac sınıfıntan türetilmelidir.</p>
+
+<p>Ruhsat sahibi, marka, model, motor gücü bilgileri bu sınıfta tanımlanmalıdır ki, alt sınıflar tarafından ortak olarak kullanılabilsin.</p>
+
+<p>Bunun dışında Traktör sınıfında yolcu sayısı bilgisine ulaşılmaması için, bu metotlar Traktör sınıfında private olarak override edilmelidir.</p>
+
+<p>Yine Otobuse ait kira bilgisi ise yine sadece bu sınıf içerisinde tanımlanmalıdır.</p>
+
+<p>Soruda tanımlanan Eylemler ise, Ciftci sınıfında tanımlanacak metotlardır.</p>
+
+<p>Bir ciftci sahip oldugu arac bilgisine göre kasko ve vergi ödeme işlemleri yapabilir.</p>
+
+<p>Tüm bu anlatılanları <a href="http://www.abdullahvelioglu.com/blog/2015/09/02/c-plus-programlama-dili/" target="_blank">C++ Programlama Dilindeki</a>
+karşılığı aşağıdaki gibi tasarlanabilir.</p>
+
+<p><pre></p>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">#include &lt;iostream&gt;
+include &lt;string&gt;
+using namespace std;
+class Arac {
+private:
+string ruhsatSahibi;
+string model;
+string marka;
+int motorGucu;
+int yolcuSayisi;
+
+public:
+
+string getRuhsatSahibi() {
+    return ruhsatSahibi;
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;setRuhsatSahibi&lt;/span&gt;(string ruhsatSahibi) {
+    this-&gt;ruhsatSahibi = ruhsatSahibi;
+}
+
+string &lt;span style=&quot;color:#ff8000&quot;&gt;getModel&lt;/span&gt;() {
+    return model;
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;setModel&lt;/span&gt;(string model) {
+    this-&gt;model = model;
+}
+
+string &lt;span style=&quot;color:#ff8000&quot;&gt;getMarka&lt;/span&gt;() {
+    return marka;
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;setMarka&lt;/span&gt;(string marka) {
+    this-&gt;marka = marka;
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;getMotorGucu&lt;/span&gt;() {
+    return motorGucu;
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;setMotorGucu&lt;/span&gt;(int motorGucu) {
+    this-&gt;motorGucu = motorGucu;
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;getYolcuSayisi&lt;/span&gt;() {
+    return yolcuSayisi;
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;setYolcuSayisi&lt;/span&gt;(int yolcuSayisi) {
+    this-&gt;yolcuSayisi = yolcuSayisi;
+}
+};
+Otomobil: Arac {
+};
+Otobus : Arac {
+private:
+int yillikKiraMiktari;
+string kiralayanKisi;
+public:
+void setYillikKiraMiktari(int yillikKiraMiktari) {
+    this-&gt;yillikKiraMiktari = yillikKiraMiktari;
+}
+&lt;span style=&quot;font-weight:700&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;getYillikKiraMiktari&lt;/span&gt;() {
+    return this-&gt;yillikKiraMiktari;
+}
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;setKiralayanKisi&lt;/span&gt;(string kiralayanKisi) {
+    this-&gt;kiralayanKisi = kiralayanKisi;
+}
+string &lt;span style=&quot;color:#ff8000&quot;&gt;getKiralayanKisi&lt;/span&gt;() {
+    return this-&gt;kiralayanKisi;
+}
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;kirala&lt;/span&gt;() {
+    // kaydedilecek kiramala bilgileri.
+}
+};
+
+Traktor : public Arac {
+
+private :
+int getYolcuSayisi();
+void setYolcuSayisi();
+
+public:
+string* ekipmanlar;
+
+&lt;span style=&quot;color:#ff8000&quot;&gt;Traktor&lt;/span&gt;() {
+    ekipmanlar = new string[3];
+    ekipmanlar[0] = &quot;Biçerdöver&quot;;
+    ekipmanlar[1] = &quot;İlaçlayıcı&quot;;
+    ekipmanlar[2] = &quot;Toprak İşleyici&quot;;
+}
+
+string &lt;span style=&quot;color:#ff8000&quot;&gt;getEkipman&lt;/span&gt;(int ekipmanNo) {
+    return ekipmanlar[ekipmanNo];
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;ekipmanKaydet&lt;/span&gt;(int ekipmanNo) {
+    string ekipman = getEkipman(ekipmanNo);
+    cout &amp;lt;&amp;lt; ekipman &amp;lt;&amp;lt; &quot; kaydedildi.&quot; &amp;lt;&amp;lt; &quot;\n&quot;;
+}
+};
+
+Motosiklet : Arac {
+
+};
+
+Ciftci {
+
+private:
+string ad;
+
+public:
+
+&lt;span style=&quot;color:#ff8000&quot;&gt;Ciftci&lt;/span&gt;(string ad) {
+    this-&gt;ad = ad;
+}   
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;vergiOde&lt;/span&gt;(Arac arac) {
+
+    float vergi = 0;
+    switch(arac.&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;getMotorGucu&lt;/span&gt;()) {
+        case 100:
+        vergi = 100;
+        break;
+        case 200:
+        vergi = 200;
+        break;
+        case 300:
+        vergi = 300;
+        break;
+    }
+    switch(arac.&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;getModel&lt;/span&gt;().&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;compare&lt;/span&gt;(&quot;2014&quot;)) {
+        case -1:
+        vergi = vergi + 50;
+        break;
+        case 0:
+        case 1:
+        vergi = vergi + 100;
+        break;
+    }
+    cout &amp;lt;&amp;lt; vergi &amp;lt;&amp;lt; &quot; TL arac vergisi odenmistir.&quot; &amp;lt;&amp;lt; &quot;\n&quot;;
+}
+
+&lt;span style=&quot;font-weight:700&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color:#ff8000&quot;&gt;kaskoOde&lt;/span&gt;(Arac arac) {
+
+    cout &amp;lt;&amp;lt; ad &amp;lt;&amp;lt; &quot; tarafindan&quot; &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; arac.&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;getMarka&lt;/span&gt;() &amp;lt;&amp;lt; &quot; adli arac kaskosu odenmistir.&quot; &amp;lt;&amp;lt; &quot;\n&quot;;
+}
+};
+
+main( int argc, const char* argv[] )
+{   
+ cout &amp;lt;&amp;lt; &quot;Basla&quot; &amp;lt;&amp;lt; &quot;\n&quot;;
+
+ Traktor traktor;
+ traktor.&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;setMarka&lt;/span&gt;(&quot;Nissan&quot;);
+ traktor.&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;setModel&lt;/span&gt;(&quot;2014&quot;);
+ traktor.&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;setMotorGucu&lt;/span&gt;(100);
+
+ Ciftci ciftci(&quot;Dogan&quot;);
+ ciftci.&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;vergiOde&lt;/span&gt;(traktor);
+ ciftci.&lt;span style=&quot;color:#33f;font-weight:700&quot;&gt;kaskoOde&lt;/span&gt;(traktor);
+}  
+</code></pre></figure>
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/programminglanguage/">Programlama Dilleri</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

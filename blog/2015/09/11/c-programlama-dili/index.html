@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="İlk olarak Dennis Ritchie tarafından 1969 yılında Bell laboratuvarında Unix üzerinde çalışan bir bilgisayarüzerinde g..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>C PROGRAMLAMA DILI &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-11">11 September 2015</time>
+  <h2>C PROGRAMLAMA DILI</h2>
+  
+
+
+  <p>İlk olarak Dennis Ritchie tarafından 1969 yılında Bell laboratuvarında Unix üzerinde çalışan bir bilgisayar
+üzerinde geliştirilen C,programcılık dünyasında bir devrim niteliğinde ortaya çıkmıştır.Bu devrimin temel
+sebebi dilin bir programci dili olmasıdır.Ayrıca dilin genel kapsamda daha karmaşık programlar yazılmasına da
+imkan vermesidir.
+<br/><br/>
+Fortran,Cobol ve Assembly gibi diller sadece belirli bir alanda program geliştirmeye izin verirken,C&#39;nin
+en genel düzeyde bir programlama dili olmasıda bu dile olan öğrenme arzusunu da geliştirmiştir.Her ne kadar
+Pascal dili mevcut olsa da,kod satırları uzayan bir program için C&#39;nin güçlü avantajı yadsınamaz düzeye
+gelmiştir.
+<br/><br/>
+C programlama dili prosedürel(proses yönelimli) bir dildir.Yani program parçacıkları belirli bir ayrıştırma ile
+bütün bir programın yapısal ve mantıksal temelini oluşturmaktadır.Bu yazıda her C programında kullanılan temel yapı
+incelenecektir.
+<pre>
+1 <b>int</b> main()
+2 {
+3 <span style="color:green;">// TODO...</span>
+4 <b>return</b> 0;
+5 }
+</pre>
+Yukarıdaki 5 satırdan oluşan program her C programında bulunan bir yapıdır.Her C programı bir <b>main</b>
+fonksiyonu ile başlar ve fonksiyonun bitiş bloğu ile sona erer.C programlama dilinde programcı tarafından
+// ve /<em>...</em>/ olmak uzere 2 farklı yorum(comment) stili bulunmaktadır.Bunlar C derleyicisi tarafından dikkate
+alınmayıp sadece programı yazan kişiye programda anlamını unuttuğu bir takım yerleri hatırlatma görevi üstlenen
+yardımcılardır.
+<br/><br/>
+return 0 ifadesi ise işletim sistemine bu programin bulunduğu belleğe 0 degeri dönüldüğü belirtilir.Buradaki
+0 değerinin bir anlamı yoktur.234124 gibi rastgele bir değer de derleyici tarafından kabul edilecektir.Ancak
+geleneksel olarak 0(false) ve 1(true) değerleri bir programı sona erdirmek için kullanılmaktadır.
+<pre>
+1 <span style="color:green;">// Standart I/O kütüphanesi (printf icin)</span>
+2<span style="color:green;">#include &#60;stdio.h&gt;</span></p>
+
+<p>4 <b>int</b> main()
+5 {
+6  /*
+7  <span style="color:green;">Ekranda Hello world görüntülemek için</span>
+8  */
+9 printf(<span style="color:red;">&quot;Hello world&quot;</span>);
+10 <b>return</b> 0;
+11 }
+</pre>
+Yukarıdaki programda da,konsol ekranında &#39;Hello world&#39; ibaresi görüntülenmektedir.printf() fonksiyonu
+stdio.h kütüphanesinde yer alan konsol ekranına aldığı parametreyi aktaran formatlama özelliğine sahip bir
+fonksiyondur.</p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/programminglanguage/">Programlama Dilleri</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

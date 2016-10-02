@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="1970&#39;li yılların güçlü dili olan C&#39;nin nesne kardeşi olarak da bilinen C++ programlama dili yine kardeşinin d..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>C++ PROGRAMLAMA DİLİ &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-02">02 September 2015</time>
+  <h2>C++ PROGRAMLAMA DİLİ</h2>
+  
+
+
+  <p>1970&#39;li yılların güçlü dili olan C&#39;nin nesne kardeşi olarak da bilinen C++ programlama dili yine kardeşinin dünyaya geldiği Bell laboratuvarında 1979 yılında Bjarne Stroustrup önderliğinde geliştirilmiştir.
+<br/><br/>
+Günümüzde de prosedürel programlama yaklaşımları hala geçerliliğini sürdürse de bu yaklaşımla hazırlanan programların karmaşıklığı arttıkça onu yönetmekte zor hale gelmektedir.<a href="http://www.abdullahvelioglu.com/blog/2015/09/04/nesneye-dayali-programlama/" target="_blank">Nesneye Dayalı Programlama</a> ilk kez Sınıflı C(C with Classes) adı altında bu dille ortaya çıkmıştır.Dilin ilk adı bu iken 1983 yilinda C++ adını almıştır.C++ çıktığı ve kullanımı yaygınlaştığı zamandan kısa bir süre sonra çok popüler bir dil hale gelmişti.Bunun altında yatan en önemli sebep kuşkusuz,kardeşi C dilinin güçlü alt yapısını devralarak,ona yeni özellikler eklemesiyle ortaya çok amaçlı çıkan sağlam bir dil olmasındandır.Gercekten de C++,C&#39;in sözdizimi ve bileşenlerini kapsamıs ve ona OOP felsefesini de dahil etmiştir.Bu sebepten ötürüdür ki C++ günümüzde hala bazı sistemler için geliştirilmekte ve kullanılmaktadır.
+<br/><br/>
+Aşagıda her C++ programında bulunan ve C&#39;den gelen iskelet gösterilmektedir.
+<pre>
+<span style="color:green;">/* Bu Bir C++ programıdır. <em>/</span>
+<span style="color:green;">#include &#60;iostream&gt;</span>
+<b>int</b> main()
+{
+cout &lt;&lt; <span style="color:red;">&quot;Hello world&quot;</span>;
+<b>return</b> 0;
+}
+</pre>
+Yukarıdakı programda <b><iostream></b> kütüphanesi C++&#39;in input/output stream yani giriş/cıkış akış kütüphanesidir.<i>cout</i> akışı bu sayede kullanılarak konsol ekranına çıktı oluşturmakla yükümlüdür.Diğer fonksiyonlar <a href="http://www.abdullahvelioglu.com/blog/2015/09/11/c-programlama-dili/" target="_blank">C Programlama Dilinden</a> devralındığı için bu kısımlara ilgili yazıdan göz gezdirebilirsiniz.Yukarıdaki program aşağıdaki C şekliyle de yazılabilirdi.
+<pre>
+<span style="color:green;">/</em> Bu Bir C++ programıdır. <em>/</span>
+<span style="color:green;">#include &#60;stdio.h&gt;</span>
+<b>int</b> main()
+{
+printf(&quot;Hello world&quot;);
+<b>return</b> 0;
+}
+</pre>
+Ancak bu yazım şekli geçerli olsa da,profesyonel C++ programcıları C++&#39;ı kendi yazım şekliyle kullanmayı tercih ederler.Her ne kadar her C programı aynı zamanda bir C++ programı da olsa,C++ programcıları bu yazım şeklini demode olarak görmektedirler.Gerçekten de bir C++ programı geliştirildiği şekliyle yazılması onu daha anlamlı kılacaktır.Ancak bu hiçbir C fonksiyonunun kullanılmayacağı anlamına gelmez.
+<br/><br/>
+Örneğin C dilinin güçlü sistem fonksiyonu SYSTEM(); hala populerliğini sürdürmektedir.
+<br/><br/>
+Bu program nesne yönelimli olarak da başka bir şekilde aşagıdaki gibi yazılabilir.
+<pre>
+<span style="color:green;">/</em> Bu sınıflı bir C++ programıdır. */</span>
+<span style="color:green;">#include &#60;iostream&gt;</span>
+<b>class</b> Helloworld
+{
+<b>public:</b>
+Helloworld(<b>char</b> message[])
+{
+cout &lt;&lt; message &lt;&lt; <span style="color:red;">&quot;\n&quot;</span>;
+}
+};
+<b>int</b> main()
+{
+<span style="color:blue;">Helloworld</span> yeniDunya=<b>new</b> <span style="color:blue;">Helloworld</span>(<span style="color:red;">&quot;Hello world&quot;</span>);
+<b>return</b> 0;
+}
+</pre>
+Bir C++ programında sınıf tanımlamak için <b>class</b> anahtar sözcüğü kullanılır.Akabinde ise sınıfın adı yazılarak açılır ve kapanır küme parantezleri eklenerek içerisine sınıf üyeleri(member class) eklenir.C++ kapsamlı belirteçlerin kullanılmasına izin verir.Bu nedenle bir kez <b>public:</b> ifadesi yazdıktan sonra her yazılacak bir üye public olacaktır.<br/><br/>Yukarıdaki programda Helloworld adında bir nesne yaratılmaktadır.Bu nesne yaratıldığı anda kurucu metodu(constructor) çağrılarak ekrana <span style="color:red;">&quot;Hello world&quot;</span> ifadesi yazılmaktadır. </td> </tr>
+                    </table></p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/programminglanguage/">Programlama Dilleri</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+

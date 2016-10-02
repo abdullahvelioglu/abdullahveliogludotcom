@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta information -->
+<meta charset="utf-8">
+<meta name="description" 
+      content="Sıralama algoritmalarının içerisinde yer alan Insertion Sort yani ekleyerek sıralama algoritmasının iki farklı metodu..." >
+<meta name="author" content="Abdullah Velioglu">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<!-- title -->
+<title>EKLEYEREK SIRALAMA(INSERTION SORT) &middot; Abdullah</title>
+
+<!-- icons -->
+<link rel="shortcut icon" href="/blog/public/images/favicon.ico" />
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="/blog/public/css/responsive.gs.12col.css">
+<link rel="stylesheet" href="/blog/public/css/animate.min.css">
+<link rel="stylesheet" href="/blog/public/css/main.css">
+
+<!-- Google fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin-ext">
+
+
+
+<!-- feed links -->
+<link rel="alternate" href="www.abdullahvelioglu.com/blog/feed.xml" type="application/rss+xml" title="">
+
+  </head>
+  <body>
+    <div class="container azul">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="http://www.abdullahvelioglu.com/blog" id="logo" title="Abdullah"
+             style="background-image: url(/blog/public/images/logo.png);"></a>
+        </div>
+        <nav class="col span_10 top-navbar">
+  
+  <a href="/blog" title="Blog"
+     >Blog</a>
+  
+  <a href="/blog/about" title="Hakkinda"
+     >Hakkinda</a>
+  
+  <a href="/blog/category" title="Kategori"
+     >Kategori</a>
+  
+</nav>
+
+      </header>
+
+      <article class="single row gutters">
+  <time class="published" datetime="2015-09-07">07 September 2015</time>
+  <h2>EKLEYEREK SIRALAMA(INSERTION SORT)</h2>
+  
+
+
+  <p>Sıralama algoritmalarının içerisinde yer alan Insertion Sort yani ekleyerek sıralama algoritmasının iki farklı metodu bulunmaktadır.Anlatımımı algoritmanın iki ozelliği ile ayrı ayrı betimleyeceğim.Bir Array’a elemanlar atanırken önce büyüklük-küçüklük durumuna göre bakılır.Eklenecek sayı,dizide bulunan elemanlardan büyük bir sayı ise sorun yoktur ve dizinin boş indeksine eklenir.Fakat eklenecek sayı dizideki herhangi bir sayıdan küçük ise,ekleneceği konumdan itibaren listedeki sayılar 1’er sıra kaydırılacaktır ki ekleyeceğimiz sayıya yer açılmış olsun.Bir örnekle konumuzu anlatmaya devam edelim.Aynı veri türlerinden oluşacak ve içi boş olan bir kümemiz olsun.Şimdi bu kümemize elemanlar ekleyelim.<br/><br/>
+Örneğin,ilk olarak 7 sayısını ekliyoruz.<br/><br/></p>
+
+<p>7 - - - -. -&gt; 7 sayısı listemizde oluşturuldu.<br/><br/></p>
+
+<p>Daha sonra 5 sayısını eklemek istediğimizi varsayalım.Ekleme yapılmadan önce eklenecek sayı ile listedeki elemanlar karşılaştırılacaktır.Listemizde şuan sadece 7 sayısı bulunduğundan yalnızca 1 sefer tarama yapılacaktır.Ekleyeceğimiz 5 sayısı 7 sayısından küçük olduğu için listemizde bulunan 7 sayısı bir kayarak 5 sayısına yer açmış olur.Dolayısıyla 5 sayısı yeni yerine yerleşecektir.<br/><br/></p>
+
+<p>5 7 - - - <br/><br/>
+Eklemeye yeni sayımız 8 ile devam ediyoruz.8 sayısı önce 5 ile test edecektir. 5<8 olduğu için,sıra 7’ye gelir.7<8 olduğu için ve başka test edecek sayı olmadığı için 8 sayısı listedeki ilk boş yere yerini alacaktır.Yeni durumda görünüm,<br/><br/>
+5 7 8 - - olacaktır.<br/><br/>
+Şimdi ise 6 sayısını eklemeye çalışalım.Dikkat edilirse 6 sayısı arada kalacak bir sayıdır ve 5’ten büyük fakat 7’den küçük bir sayıdır.O yüzden 5’ten sonraki tüm sayılar 1’er sıra kaydırılır. <br/><br/>
+5 – 7 8 -  ancak 6 sayısına bu şekilde yer açılabilir,yeni durumda görünüm,<br/><br/>
+5 6 7 8 -  olacaktır.<br/><br/>
+Son olarak 2 sayısını ekleyeceğimizi düşünelim.2 sayısı,listedeki ilk eleman olan 5 sayısı ile test edilecektir.2<5 olduğu için 2 sayısının yeri belirlenmiş olup, artık diğer elemanlarla test edilmesine gerek kalmaz.Çünkü 2 sayısı diğer elemanlardan zaten küçük olacaktır ve bakmak gereksizdir. Dolayısıyla listedeki 5 sayısından itibaren tüm sayılar 1’er sıra kaydırılacaktır.
+Nihayi dörünüm 2 5 6 7 8 şeklinde olacaktır.<br/><br/>
+Ekleyerek sıralama algoritmasının ilk versiyonu yukarıda anlatılan mantıkla çalışır.<br/><br/></p>
+
+<h2>2.Versiyon</h2>
+
+<p>Algoritmanın bir de 2.versiyonu bulunmaktadır.Bu versiyon derki,dizide bir sıralı bölüm olsun bir de düzensiz bölüm olsun.Yukarıdaki örneklerde bahsi geçen sayılar tek seferde diziye yerleştirilir.Yukarıdaki örneğimizdeki elemanların ekleme sırası ile dizimize elemanları yerleştirelim.
+<pre>
+7   5   8   6   2
+</pre>
+Dizimizin bölmelerine bakılacak olursa siyah bölmedeki elemanlarımız düzensiz kısmımızdır,yani bu bölmeler taramaya tabi tutulmamış,henüz el atılmamış kısımlarıdır. Algoritmamızı yukarıda örneğimiz ile anlamaya çalışalım.İlk olarak yerleşik 7 sayısı ile bir sonraki dizi elemanı olan 5 karşılaştırılır.7&gt;5 olduğundan yer değişikliği gerçekleşecektir ve ilk adımda tarama sona erecektir.(1.Adım)
+<pre>
+5   7   8   6   2
+</pre>
+ Bir sonraki adıma geçelim.dizimizin 1.indeksli elemanı olan 7 sayısı 8 ile   kıyaslanacaktır.7<8 olduğundan değişiklik olmayacaktır.7 sayısı 5 sayısından büyük olduğu için değişiklik olmayacaktır.8 sayısı 7’den büyük olduğu için yer değiştirme işlemi sonlanacaktır.(2.Adım)
+<pre>
+5   7   8   6   2
+</pre>
+İşleme 3.adımız ile devam ediyoruz.8 sayısı 6 ile kıyaslanacak.8&gt;6 olduğundan yer değiştirilir.
+<pre>
+5   7   6   8   2
+</pre>
+Fakat işlem bitmedi!Çünkü 6 sayısı 7 sayısından da küçüktür.bir değişiklik daha gerçekleşir ve yeni görünüm
+<pre>
+5   6   7   8   2
+</pre>
+Şeklinde olacaktır.6&gt;5 olduğu için 3.adımızda sonlanacaktır.(3.Adım)<br/><br/>
+Siyah bölmemizde kalan tek sayı 2. sırayla 8 sayısı 2 ile karşılaştırılacaktır.8&gt;2 olduğu için yer değişikliği olacaktır.2 sayısı bakılmaya daha sonra 7,6 ve 5 ile bakılıp onlarla da sırasıyla değişikliğe gidecektir çünkü dizimizin en küçük elemanı görüldüğü üzere 2 dir.
+<pre>
+5   6   7   2   8</p>
+
+<p>5   6   2   7   8</p>
+
+<p>5   2   6   7   8</p>
+
+<p>2   5   6   7   8
+</pre>
+Görüldüğü üzere Insertion Sort algoritmasının 2.sıralanış modeli ilede sayılarımız sıralanmış oldu.<br/><br/>
+İki model arasında şu <i>fark</i>bulunur.ilk modelimizde hatırlanacağı gibi sayılarımız önce taratılıp sonra yerleştiriliyor idi.Fakat 2.modelimizde sayılar once rastgele yerleştirilerek,ilk sayıdan başlanır ve indeks numarasının 1 fazlası kadar sayı taraması yapılır. Yukarıdaki örnekte sayılarımızı tekrar ele alırsak,ilk sayımız dizimizin 0 numaralı indeksi 5 idi.5 sayısı 8 ile kıyaslandı ve ilk adım tamamlanmıştı.Yani 1 sefer tarama yapıldı.(Bilindiği üzere diziler 0 numaralı indis değerleri ile başlar).<br/><br/>
+Insertion sort algoritmasının en kötü durumda çalışacağı yer tersten sayıları düzenlerkendir.Örneğin, 5  4  3  2  1 olarak verilen bir sayı dizisinde N elemanlı bir dizi 2N tarama yaparak sonuca ulaşacaktır.
+<p>Analizi yapılan algoritmanın C dilindeki karşılığı verilmiştir.</p>
+<pre>
+<b>int</b> <em>InsertionSort(int dizi[]){
+  int sayi=0,flag=0,i,j,k=0;
+  dizi=(int *)malloc(boyut</em>sizeof(int));
+  printf(&quot;Boyutu 5 olan bir dizinin elemanlarını giriniz.&quot;);
+  scanf(&quot;%d&quot;,&amp;sayi);
+  dizi[0]=sayi;
+  for(i=1;i<boyut;i++){
+    scanf("%d",&sayi);
+    for(j=0;j<i;j++){
+      if(dizi[j]>sayi){
+        for(k=i-1;k&gt;=j;k--)
+        dizi[k+1]=dizi[k];
+        dizi[j]=sayi;
+        flag=1;
+        break;
+      }
+    }
+    if(flag==0)
+    dizi[i]=sayi;
+    flag=0;
+  }
+  return dizi;
+}</p>
+
+<p></pre><br/>
+<p>Bağlı liste modeli kullanıldığında aynı algoritma aşağıdaki gibi verilebilir.</p>
+<pre>
+node <em>InsertionSort(node *kutu,int data){
+  if(kutu==NULL){
+    kutu=(node *)malloc(sizeof(node));
+    kutu-&gt;data=data;
+    kutu-&gt;next=NULL;
+    return kutu;
+  }
+  if(data<kutu->data){
+    node *temp=(node</em>)malloc(sizeof(node));
+    temp-&gt;next=kutu;
+    temp-&gt;data=data;
+    return temp;
+  }
+  node <em>iter=kutu;
+  node *root=kutu;
+  while(iter-&gt;next!=NULL){
+    if(iter-&gt;next-&gt;data &gt; data){
+      node *temp=(node *)malloc(sizeof(node));
+      temp-&gt;data=data;
+      temp-&gt;next=iter-&gt;next;
+      iter-&gt;next=temp;
+      return kutu;
+    }
+    iter=iter-&gt;next;
+  }
+  if(iter-&gt;NULL){
+    node *temp=(node *)malloc(sizeof(node));
+    temp-&gt;data=data;
+    iter-&gt;next=temp;
+    temp-&gt;next=NULL;
+    return kutu;
+  }
+}</pre>
+<br/>
+<p>Son olarak algoritmanın 2.versiyonu yine aynı dilde verilirse,</p>
+<pre>
+int *InsertionSort(int dizi[]){
+  int sayi=0,temp=0,i,j;
+  dizi=(int *)malloc(boyut</em>sizeof(int));
+  printf(&quot;Boyutu 5 olan bir dizinin elemanlarını giriniz.&quot;);
+  for(i=0;i<boyut;i++){
+    scanf("%d",&sayi);
+    dizi[i]=sayi;
+  }
+  for(i=0;i<boyut-1;i++){
+    for(j=i;j>=0;j--){
+      if(dizi[j+1]<dizi[j]){
+        temp=dizi[j];
+        dizi[j]=dizi[j+1];
+        dizi[j+1]=temp;
+      }
+      else
+      break;
+    }
+  }
+  return dizi;
+}
+</pre>
+<br/>
+<p>şeklinde bir kod dilimi gerçeklenmiş olacaktır.</p></p>
+
+
+  <p id="post-meta">Kategori <i class="fa fa-tag"></i>: <a href="http://www.abdullahvelioglu.com/blog/category/algorithm/">Algoritmalar</a></p>
+
+</article>
+
+
+      <footer>
+        <p>
+          Bu site <a rel="license" target="_blank" href="http://www.abdullahvelioglu.com/blog/about/">Abdullah Velioğlu</a> tarafından <a rel="license" target="_blank" href="https://jekyllrb.com/docs">Jekyll Dokümantasyonu </a> kullanılarak tasarlanmıştır. <br>Tamamen açık kaynak kodlu olan bu web sitesinin kaynak kodlarını <a rel="license" target="_blank" href="https://github.com/abdullahvelioglu/jekyllstaticblog">buraya </a> tıklayarak görebilirsiniz.
+        </p>
+      </footer>
+    </div>
+
+    <!-- scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/blog/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+  </body>
+</html>
+
