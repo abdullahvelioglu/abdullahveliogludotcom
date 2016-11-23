@@ -1,113 +1,201 @@
-/* reset */
-* {
-  margin: 0;
-  padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-#wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-label {
-  cursor: pointer;
-}
-label:focus {
-  outline: none;
-}
-
-.menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  width: 240px;
-  height: 100%;
-  transform: translate3d(-240px, 0, 0);
-  transition: transform 0.35s;
-}
-.menu label.menu-toggle {
-  position: absolute;
-  right: -60px;
-  width: 60px;
-  height: 60px;
-  line-height: 0px;
-  display: block;
-  padding: 0;
-  text-indent: -9999px;
-  background: #fff url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50%/25px 25px no-repeat;
-}
-.menu ul li > label {
-  background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png) 95% 50%/16px 16px no-repeat;
-}
-.menu ul li a, .menu ul li label {
-  display: block;
-  text-align: center;
-  padding: 0 20px;
-  line-height: 60px;
-  text-decoration: none;
-  color: #000;
-}
-.menu ul li a:hover, .menu ul li label:hover {
-  color: #666;
-}
-
-/* hide inputs */
-.menu-checkbox {
-  display: none;
-}
-
-/* hide navigation icon for sublabels */
-.menu .menu label.menu-toggle {
-  background: none;
-}
-
-/* fade in checked menu */
-.menu-checkbox:checked + .menu {
-  transform: translate3d(0, 0, 0);
-}
-
-/* for show */
-html, body {
-  height: 100%;
-}
+/* Code written by Daniel Ignatov and Atanas Tankov */
 
 body {
-  background: url(http://37.media.tumblr.com/f6c67ec2821a91051e4175f8a102e1e2/tumblr_n6rzpcsMk41st5lhmo1_1280.jpg) 50% 50%/cover;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    background-color: black;
+    text-shadow: 1px 1px 1px #888888;
+    letter-spacing: 0.5px;
 }
 
-p {
-  margin-bottom: 15px;
+h1 {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 42px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	text-shadow: 1px 1px 1px #888888;
 }
 
-#info {
-  display: table;
-  background: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  width: 100%;
+h2 {
+	letter-spacing: 5px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 28px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	text-shadow: 1px 1px 1px #888888;
 }
-#info #info-content {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+
+/* Image align to text */
+img {
+    vertical-align: middle;
+}
+
+#content {
+	margin: 0 auto;
+	width: 100%;
+	height: 800px;
+	background-size: cover;
+	background-position: center;
+	background-image: url("../images/background.jpg");
+}
+
+#person-name-header {
+	padding-top: 10%;
+    text-align: center;
+}
+
+#person-title {
+	padding-top: 20px;
+	text-align: center;
+}
+
+#person-info {
+	padding-top: 20px;
+    text-align: center;
+}
+
+#footer {
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	text-align: center;
+	margin-top: 2%;
+	text-shadow: none;
+}
+
+/* Feature example */
+.name:nth-child(even) {
+	color: #bb0000;
+}
+
+.green {
+	color: #bb0000;
+}
+
+.blue:hover, .blue:active {
+	color: #00aced;
+}
+
+.mail:hover, .mail:active{
+	color: #ffef6e;
+}
+
+.location:hover, .location:active{
+	color: #4169e1;
+}
+
+.btncolor:hover, .btncolor:active{
+	color: #bb0000;
+	background-color:  #fff;
+}
+
+
+.github:hover, .github:active{
+	color: #7dd2d9
+}
+
+
+
+/* Link Style */
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+	transition: 0.5s ease;
+}
+
+a:hover, a:active {
+	/* Blue */
+
+	text-decoration: none;
+
+}
+
+
+/* Animation */
+.animate-top {
+    position: relative;
+    -webkit-animation: animatetop 3.4s;
+    animation: animatetop 3.4s
+}
+
+@-webkit-keyframes animatetop {
+	from {
+		top: 40%;
+		opacity: 0
+	} to {
+    	top: 0;
+    	opacity: 1
+	}
+}
+
+@keyframes animatetop {
+    from {
+        top: 40%;
+        opacity:0
+    } to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+a.button {
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
+  text-decoration: none;
   color: #fff;
-  font-size: 12px;
-}
-#info #info-content h1 {
-  color: #fff;
-  border: 3px solid #fff;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.1);
-  font-size: 22px;
-  font-weight: normal;
-  padding: 20px;
-  margin: 10px;
-  display: inline-block;
-}
-#info #info-content h1 strong {
+  border: 2px solid #fff;
+  padding: 10px;
+  position: relative;
   display: block;
-  font-size: 26px;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 1;
+  width: 300px;
+  background-color: transparent;
+}
+
+
+
+a.button:hover::before {
+  transform: rotate(70deg);
+  width: 600px;
 }

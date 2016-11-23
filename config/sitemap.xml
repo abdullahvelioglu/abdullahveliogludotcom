@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.abdullahvelioglu.com/sitemap.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.abdullahvelioglu.com/sitemap.xml
+            http://www.abdullahvelioglu.com/sitemap.xml">
+
+<url>
+  <loc>http://www.abdullahvelioglu.com/</loc>
+  <lastmod>2016-10-02T01:35:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/</loc>
+  <lastmod>2016-09-02T07:21:17+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/about/</loc>
+  <lastmod>2016-08-09T07:09:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/category/</loc>
+  <lastmod>2016-08-09T07:09:27+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/09/02/Docker-nedir/</loc>
+  <lastmod>2016-09-02T07:20:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/08/09/20-dakikada-ruby/</loc>
+  <lastmod>2016-08-09T07:09:31+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/08/03/svn-nedir/</loc>
+  <lastmod>2016-08-09T07:09:30+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/07/28/tcp-ip/</loc>
+  <lastmod>2016-08-09T07:09:35+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/07/27/dhcp/</loc>
+  <lastmod>2016-08-09T07:09:32+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/07/26/ag-hizmetleri/</loc>
+  <lastmod>2016-08-09T07:09:33+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/07/19/centos-6x-netinstall/</loc>
+  <lastmod>2016-08-09T07:09:34+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/07/18/statik-dhcp-adresleri-olusturma/</loc>
+  <lastmod>2016-08-09T07:09:33+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2016/03/24/azer-koculu-kik-left-pad-ve-npm/</loc>
+  <lastmod>2016-08-09T07:09:30+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/19/ngrok/</loc>
+  <lastmod>2016-08-09T07:09:22+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/18/recursive-fonksiyonlar/</loc>
+  <lastmod>2016-08-09T07:09:19+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/17/jquery-plugin/</loc>
+  <lastmod>2016-08-09T07:09:17+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/16/normalizasyon/</loc>
+  <lastmod>2016-08-09T07:09:22+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/15/meta-viewport/</loc>
+  <lastmod>2016-08-09T07:09:18+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/14/solid-prensibi/</loc>
+  <lastmod>2016-08-09T07:09:24+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/13/symbolic-links/</loc>
+  <lastmod>2016-08-09T07:09:19+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/12/hard-links/</loc>
+  <lastmod>2016-08-09T07:09:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/11/c-programlama-dili/</loc>
+  <lastmod>2016-08-09T07:09:18+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/10/sarmalama/</loc>
+  <lastmod>2016-08-09T07:09:24+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/09/miras/</loc>
+  <lastmod>2016-08-09T07:09:23+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/08/secerek-siralama/</loc>
+  <lastmod>2016-08-09T07:09:17+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/07/ekleyerek-siralama/</loc>
+  <lastmod>2016-08-09T07:09:20+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/06/kabarcik-siralama/</loc>
+  <lastmod>2016-08-09T07:09:21+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/05/cok-bicimlilik/</loc>
+  <lastmod>2016-08-09T07:09:14+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/04/nesneye-dayali-programlama/</loc>
+  <lastmod>2016-08-09T07:09:21+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/03/joker-karakterler/</loc>
+  <lastmod>2016-08-09T07:09:16+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/02/c-plus-programlama-dili/</loc>
+  <lastmod>2016-08-09T07:09:15+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2015/09/01/linux-dosya-ve-dizinler-ile-calismak/</loc>
+  <lastmod>2016-08-09T07:09:16+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/2014/03/07/demo-post/</loc>
+  <lastmod>2016-08-09T07:09:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/category/linux/</loc>
+  <lastmod>2016-09-02T07:21:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/category/programminglanguage/</loc>
+  <lastmod>2016-08-09T07:09:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/category/algorithm/</loc>
+  <lastmod>2016-08-09T07:09:26+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/category/web/</loc>
+  <lastmod>2016-08-09T07:09:29+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/category/database/</loc>
+  <lastmod>2016-08-09T07:09:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/category/softwarenews/</loc>
+  <lastmod>2016-08-09T07:09:26+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.abdullahvelioglu.com/blog/category/networking/</loc>
+  <lastmod>2016-08-09T07:09:27+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+</urlset>
